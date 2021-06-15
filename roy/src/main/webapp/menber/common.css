@@ -1,0 +1,7 @@
+caption { font-size:30px; line-height:200%; font-weight:bold;  }
+body { height: 60px; background-color: rgb(128, 0, 255)e; background-image: url("login.png"); }
+table { background-color: rgb(255, 255, 255); width: 100%; 
+	border: 1px solid #ff80ff;}
+th { background-color: rgb(255, 255, 255); color: black; }
+th, td { padding: 15px; border: 1px solid #FF64E3; }
+tr:hover { background-color: rgb(128, 255, 255); color: rgb(128, 0, 255); }
