@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="porderns">
+<!-- 	<select id="select" parameterType="string" resultType="porder">
+		select * from porder where id=#{m_id}
+	</select>
+	<insert id="insert" parameterType="porder">
+		insert into porder values (#{o_num},sysdate,#{o_req},
+			#{p_num},#{m_id})
+	</insert> -->
+</mapper>

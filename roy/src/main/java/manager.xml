@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="managerns">
+<!-- 	<select id="select" parameterType="string" resultType="manager">
+		select * from manager where mng_id=#{mng_id} 
+	</select>
+	<insert id="insert" parameterType="member">
+		insert into manager values (#{mng_id},#{mng_pass})
+	</insert>
+	<update id="update" parameterType="member">
+		update manager set mng_pass=#{mng_pass}, where mng_id=#{mng_id}
+	</update> -->
+</mapper>

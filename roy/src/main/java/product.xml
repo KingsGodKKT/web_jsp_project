@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="productns">
+ 	
+	<select id="select" parameterType="int" resultType="product">
+		select * from product where p_num=#{p_num} 
+	</select>
+	
+	<insert id="insert" parameterType="product">
+		insert into product values (#{p_num},#{p_name},#{p_cost},#{p_qty},
+			#{p_size},#{p_cov},#{p_img},#{p_date})
+	</insert>
+	
+	<select id="selectList" resultType="product" >
+		select p_num, p_img, p_name, p_cost, p_date from product 
+	</select>
+	
+	<!-- 상품 리스트 상세 정보 -->
+	<select id="getDetail" parameterType="int" resultType="product">
+		select * from product where p_num=#{p_num}
+	</select>
+	
+	<update id="update" parameterType="product">
+		update product set p_name=#{p_name},p_cost=#{p_cost},p_qty=#{p_qty},
+		 where p_num=#{p_num}
+	</update>
+	<delete id="delete" parameterType="int">
+		delete product where p_num=#{p_num}
+	</delete>
+	<!-- 
+	<select id="updateImgName" parameterType="hashMap" resultType="int">
+		update product set p_img = #{p_img} where p_num=#{p_num}
+	</select>
+	<select id="selectMax" resultType="int">
+		select max(p_num) from product
+	</select> -->
+</mapper>

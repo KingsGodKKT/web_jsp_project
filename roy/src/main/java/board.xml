@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="boardns">
+	<select id="select" parameterType="string" resultType="board">
+		select * from board where id=#{m_id} or b_name = #{b_name}
+	</select>
+	<!-- 게시물 받아오기 -->
+	<select id="selectBoardList" resultType="board" >
+		select b_num, b_name, b_cnt, b_date from board 
+	</select>
+	
+
+	<!-- 구매할 게시물 선택 -->
+	<select id="selectOrderList" resultType="board" >
+		select 
+			b_num
+			,b_name
+			,b_cnt
+			,b_date 
+		from 
+			board 
+		where 
+			b_num in ${string}  
+			
+	</select>
+	
+
+	
+	<insert id="insert" parameterType="board">
+		insert into board values (#{b_num},#{b_name},#{b_cnt},sysdate,
+			#{b_view},#{b_shr},#{b_cmm},#{m_id})
+	</insert>
+	<update id="update" parameterType="board">
+		update board set b_name=#{b_name},b_cnt=#{b_cnt},sysdate,
+		b_shr=#{b_shr},b_cmm=#{b_cmm} where id=#{b_num}
+	</update>
+	<delete id="delete" parameterType="int">
+		delete board where b_num = #{b_num}
+	</delete>
+</mapper>

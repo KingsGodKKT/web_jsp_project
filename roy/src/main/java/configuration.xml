@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<properties resource="dbconnect.properties" />
+	<typeAliases>
+		<!-- roy.model.Member를 짧게 member로 별명을 바꾼다 -->
+		<typeAlias alias="board" 			type="roy.model.Board" />
+		<typeAlias alias="bcomment" 			type="roy.model.Bcomment" />
+		<typeAlias alias="manager" 			type="roy.model.Manager" />
+		<typeAlias alias="rmember" 			type="roy.model.Rmember" />
+		<typeAlias alias="porder" 			type="roy.model.Porder" />
+		<typeAlias alias="product" 			type="roy.model.Product" />
+		<typeAlias alias="rfile" 			type="roy.model.Rfile" />
+	</typeAliases>
+	<environments default="development">
+		<environment id="development">
+			<transactionManager type="JDBC" />
+			<dataSource type="POOLED">
+				<property name="driver" value="${driver}" />
+				<property name="url" value="${url}" />
+				<property name="username" value="${username}" />
+				<property name="password" value="${password}" />
+			</dataSource>
+		</environment>
+	</environments>
+	<mappers>
+		<mapper resource="bcomment.xml" />
+		<mapper resource="board.xml" />
+		<mapper resource="manager.xml" />
+		<mapper resource="rmember.xml" />
+		<mapper resource="porder.xml" />
+		<mapper resource="product.xml" />
+		<mapper resource="rfile.xml" />
+	</mappers>
+</configuration>

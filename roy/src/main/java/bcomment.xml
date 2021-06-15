@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="bcommentns">
+	<!-- <select id="select" parameterType="string" resultType="bcomment">
+		select * from bcomment where p_num=#{p_num} 
+	</select> -->
+<!-- 	<insert id="insert" parameterType="bcomment">
+		insert into bcomment values (#{c_num},#{c_cnt},sysdate,#{b_num},
+			#{m_id})
+	</insert>
+	<update id="update" parameterType="bcomment">
+		update bcomment set c_cnt=#{c_cnt},sysdate, where c_num=#{c_num}
+	</update>
+	<update id="delete" parameterType="string">
+		update bcomment set c_cnt = '댓글이 삭제 되었습니다'
+	</update> -->
+</mapper>
