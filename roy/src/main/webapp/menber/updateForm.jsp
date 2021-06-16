@@ -18,15 +18,15 @@
 	<input type="hidden" name="id" value="${member.id}">
 <table><caption>회원 가입</caption>
 	<tr><th>아이디</th><td>${member.id}</td></tr>
-	<tr><th>암호</th><td><input type="password" name="password" 
+	<tr><th>암호</th><td><input type="password" name="m_pass" 
 		required="required" autofocus="autofocus"></td></tr>
 	<tr><th>암호확인</th><td><input type="password" name="confirmPass" 
 		required="required"></td></tr>
-	<tr><th>이름</th><td><input type="text" name="name" 
+	<tr><th>이름</th><td><input type="text" name="m_name" 
 		required="required" value="${member.name }"></td></tr>
-	<tr><th>주소</th><td><input type="text" name="address" 
+	<tr><th>주소</th><td><input type="text" name="m_addr" 
 		required="required" value="${member.address }"></td></tr>
-	<tr><th>전화</th><td><input type="tel" name="tel" title="전화형식 3-3,4-4"
+	<tr><th>전화</th><td><input type="tel" name="m_tel" title="전화형식 3-3,4-4"
 		required="required" pattern="\d{3}-\d{3,4}-\d{4}" placeholder="010-1111-1111"
 		value="${member.tel }"></td></tr>
 	<tr><th colspan="2"><input type="submit" value="확인"></th></tr>

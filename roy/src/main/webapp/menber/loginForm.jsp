@@ -7,9 +7,9 @@
 </head><body>
 <form action="login.jsp">
 <table><caption>로그인</caption>
-	<tr><th>아이디</th><td><input type="text" name="id" 
+	<tr><th>아이디</th><td><input type="text" name="m_id" 
 		required="required"></td></tr>
-	<tr><th>암호</th><td><input type="password" name="password"
+	<tr><th>암호</th><td><input type="password" name="m_pass"
 		required="required"></td></tr>
 	<tr><th colspan="2"><input type="submit" value="확인"></th></tr>
 </table></form>

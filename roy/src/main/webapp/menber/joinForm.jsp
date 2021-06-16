@@ -14,16 +14,16 @@
 </script>
 </head><body><form action="join.jsp" method="post" name="frm">
 <table><caption>회원가입</caption>
-	<tr><th>아이디</th><td><input type="text" name="id" 
+	<tr><th>아이디</th><td><input type="text" name="m_id" 
 		required="required"><input type="button"
 		value="중복체크" onclick="return chk()"></td></tr>
-	<tr><th>암호</th><td><input type="password" name="password" 
+	<tr><th>암호</th><td><input type="password" name="m_pass" 
 		required="required"></td></tr>
-	<tr><th>이름</th><td><input type="text" name="name" 
+	<tr><th>이름</th><td><input type="text" name="m_name" 
 		required="required"></td></tr>
-	<tr><th>주소</th><td><input type="text" name="address" 
+	<tr><th>주소</th><td><input type="text" name="m_addr" 
 		required="required"></td></tr>
-	<tr><th>전화번호</th><td><input type="tel" name="tel" 
+	<tr><th>전화번호</th><td><input type="tel" name="m_tel" 
 		required="required" pattern="\d{3}-\d{3,4}-\d{4}"
 		title="전화번호 형식 3-3,4-4" placeholder="010-1111-1111"></td></tr>
 	<tr><th colspan="2"><input type="submit" value="확인"></th></tr>
