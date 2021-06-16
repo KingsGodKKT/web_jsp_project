@@ -101,11 +101,11 @@ public class MemberDao {
 			pstmt.setString(1, id);
 			rs    = pstmt.executeQuery();
 			if (rs.next()) {
-				mem.setId(rs.getString("id"));
-				mem.setPassword(rs.getString("password"));
-				mem.setName(rs.getString("name"));
-				mem.setAddress(rs.getString("address"));
-				mem.setTel(rs.getString("tel"));
+				mem.setId(rs.getString("m_id"));
+				mem.setPassword(rs.getString("m_pass"));
+				mem.setName(rs.getString("m_name"));
+				mem.setAddress(rs.getString("m_addr"));
+				mem.setTel(rs.getString("m_tel"));
 			} 
 		}catch(Exception e) { System.out.println(e.getMessage());			
 		}finally {
@@ -175,13 +175,13 @@ public class MemberDao {
 			rs = pstmt.executeQuery();	
 			while(rs.next()) { 
 				Member mem = new Member();
-				mem.setId(rs.getString("id"));
-				mem.setPassword(rs.getString("password"));
-				mem.setName(rs.getString("name"));
-				mem.setAddress(rs.getString("address"));
-				mem.setTel(rs.getString("tel"));
-				mem.setReg_date(rs.getDate("reg_date"));
-				mem.setDel(rs.getString("del"));
+				mem.setId(rs.getString("m_id"));
+				mem.setPassword(rs.getString("m_pass"));
+				mem.setName(rs.getString("m_name"));
+				mem.setAddress(rs.getString("m_addr"));
+				mem.setTel(rs.getString("m_tel"));
+				mem.setReg_date(rs.getDate("m_date"));
+				mem.setDel(rs.getString("m_del"));
 				list.add(mem);
 			}
 		} catch (Exception e) {
