@@ -4,11 +4,20 @@ public class Porder {
 	private Integer o_num ;   
     private Date o_date;
     private String o_req;
-    private Integer o_qty;
-    private Integer o_cost;
     //fk
     private Integer p_num; //상품번호
     private String m_id;   //아이디
+    
+    private Integer o_qty;
+    private Integer o_cost;
+    private Character o_pay;   
+    
+	public Character getO_pay() {
+		return o_pay;
+	}
+	public void setO_pay(Character o_pay) {
+		this.o_pay = o_pay;
+	}
 	public Integer getO_num() {
 		return o_num;
 	}

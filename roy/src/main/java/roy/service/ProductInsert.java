@@ -61,8 +61,8 @@ public class ProductInsert implements CommandProcess {
 		pInfo.setP_qty(p_qty);
 		pInfo.setP_size(p_size);
 		pInfo.setP_cov(p_cov);
-		pInfo.setP_img(p_img);
 		pInfo.setP_date(p_date);
+		pInfo.setP_img(p_img);
 		
 		/*
 		 * System.out.println(pInfo.getP_cov()); System.out.println(pInfo.getP_img());

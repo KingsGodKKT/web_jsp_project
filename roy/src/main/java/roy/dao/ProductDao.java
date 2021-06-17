@@ -10,7 +10,7 @@ import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
 import roy.model.Product;
-import roy.model.Rmember;
+
 
 public class ProductDao {
 	// singleton
