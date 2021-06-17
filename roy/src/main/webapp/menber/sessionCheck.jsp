@@ -3,4 +3,5 @@
 	if (id == null || id.equals("")) {
 		response.sendRedirect("loginForm.jsp");
 		return;
-	}
+
+%>	}

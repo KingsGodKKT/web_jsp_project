@@ -15,6 +15,7 @@
 	<script type="text/javascript">
 		alert("탈퇴완료");
 		location.href = "main.jsp";
+		
 	</script>
 	<%   } else { %>
 	<script type="text/javascript">
