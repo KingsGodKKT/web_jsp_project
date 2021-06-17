@@ -1,7 +1,16 @@
+<<<<<<< HEAD
 caption { font-size:30px; line-height:200%; font-weight:bold;  }
 body { height: 60px; background-color: rgb(128, 0, 255)e; background-image: url('login.png'); background-repeat: repeat-x; background-size : cover; }
 table { background-color: rgb(255, 255, 255); width: 100%; 
 	border: 1px solid #ff80ff;}
 th { background-color: rgb(255, 255, 255); color: black; }
 th, td { padding: 15px; border: 1px solid #FF64E3; }
+=======
+caption { font-size:30px; line-height:200%; font-weight:bold;  }
+body { height: 60px; background-color: rgb(128, 0, 255)e; background-image: url('login.png'); background-repeat: repeat-x; background-size : cover; }
+table { background-color: rgb(255, 255, 255); width: 100%; 
+	border: 1px solid #ff80ff;}
+th { background-color: rgb(255, 255, 255); color: black; }
+th, td { padding: 15px; border: 1px solid #FF64E3; }
+>>>>>>> refs/remotes/origin/master
 tr:hover { background-color: rgb(64, 0, 128); color: rgb(128, 0, 255); }

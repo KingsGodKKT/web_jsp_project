@@ -4,4 +4,3 @@
 		response.sendRedirect("loginForm.jsp");
 		return;
 	}
-%>
