@@ -13,8 +13,8 @@
 			alert("상품이 등록되었습니다");
 			
 			//이 부분 고치기 관리자 화면으로 넘기기
-			//history.go(-1);
-			location.href = "product/productlistview.do";
+			history.go(-1);
+			//location.href = "productlistview.do";
 		</script>
 	</c:if>
 	

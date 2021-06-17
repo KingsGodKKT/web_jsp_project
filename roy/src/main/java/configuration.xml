@@ -6,7 +6,7 @@
 	<typeAliases>
 		<!-- roy.model.Member를 짧게 member로 별명을 바꾼다 -->
 		<typeAlias alias="board" 			type="roy.model.Board" />
-		<typeAlias alias="bcomment" 			type="roy.model.Bcomment" />
+		<typeAlias alias="bcomment" 		type="roy.model.Bcomment" />
 		<typeAlias alias="manager" 			type="roy.model.Manager" />
 		<typeAlias alias="rmember" 			type="roy.model.Rmember" />
 		<typeAlias alias="porder" 			type="roy.model.Porder" />
