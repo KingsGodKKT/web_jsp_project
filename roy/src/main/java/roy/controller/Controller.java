@@ -1,5 +1,6 @@
 package roy.controller;
 import java.io.FileInputStream;
+
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -15,6 +16,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import roy.service.CommandProcess;
+
 @WebServlet(urlPatterns="*.do",	
 	initParams={@WebInitParam(name="config",value="/WEB-INF/command.properties")})
 public class Controller extends HttpServlet {
@@ -45,7 +47,7 @@ public class Controller extends HttpServlet {
 	          String command = (String)keyIter.next(); 
 	          // command : message.do
 	          String className = pr.getProperty(command); 
-	          // className : ch13.service.Message문자
+	          
 	          try {
 	               Class<?> commandClass = Class.forName(className);
 	               // commandClass : service.Message 클래스
@@ -72,6 +74,7 @@ public class Controller extends HttpServlet {
 		      command = command.substring(
 		    		 request.getContextPath().length()+1); 
 		      // command : message.do
+		      System.out.println("command : " + command);
 	          com = (CommandProcess)commandMap.get(command); 
 	          // com : service.Message객체를 CommandProcess로 형변환
 	          // 자식 즉 Message객체의 requestPro()메소드 실행

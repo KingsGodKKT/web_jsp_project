@@ -9,7 +9,7 @@
 	
 	<insert id="insert" parameterType="product">
 		insert into product values (#{p_num},#{p_name},#{p_cost},#{p_qty},
-			#{p_size},#{p_cov},#{p_img},#{p_date})
+			#{p_size},#{p_cov},#{p_date},#{p_img})
 	</insert>
 	
 	<select id="selectList" resultType="product" >

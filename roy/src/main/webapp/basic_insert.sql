@@ -16,7 +16,7 @@ insert into board values ('3', '아웃백', '맛있어', SYSDATE, '0', 'n',
 -- 상품 추가
 --insert into product values ('1', '30장 포토북', '30000', '150', '8x8', '하드커버', sysdate);
 -- 주문번호
-insert into porder values ('1', sysdate, '뾱뽁이 부탁드려요', '1', 'k1');
+--insert into porder values ('1', sysdate, '뾱뽁이 부탁드려요', '1', 'k1');
 
 --관리자 추가
 insert into manager values ('master', '1234');
