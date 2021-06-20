@@ -22,7 +22,8 @@
 		alert("탈퇴취소");
 		history.go(-1);
 	</script>
-	<%  } %>
+	
+	<%} %>
 </body>
 
 </html>

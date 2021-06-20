@@ -13,32 +13,35 @@
 <script src="../js/bootstrap.min.js"></script>
 </head>
 <body>
-<form action="productlistview.do">
-	<input type="submit" value="확인">
-</form>
-	<table class="table table-hover">
-		<tr>
-			<th width="25%">상품번호</th>
-			<th width="25%">이미지</th>
-			<th width="25%">상품명</th>
-			<th width="25%">가격</th>
-		</tr>
-		<c:if test="${empty list}">
+	<div class="container">
+		<form action="productlistview.do">
+			<input type="submit" value="확인">
+		</form>
+		<table class="table table-hover">
 			<tr>
-				<th colspan=5">등록된 상품이 없습니다</th>
+				<th width="25%">상품번호</th>
+				<th width="25%">이미지</th>
+				<th width="25%">상품명</th>
+				<th width="25%">가격</th>
 			</tr>
-		</c:if>
-		<c:if test="${not empty list }">
-			<c:forEach var="product" items="${list }">
+			<c:if test="${empty list}">
 				<tr>
-					<td>${product.p_num }</td>
-					<td><img alt="${product.p_img }" src="../fileSave/${product.p_img } "></td>
-					<td><a href="productview.do?p_num=${product.p_num }">${product.p_name }</a></td>
-					<td>${product.p_cost }</td>
-<%-- 					<td>${product.p_date }</td> --%>
+					<th colspan=5">등록된 상품이 없습니다</th>
 				</tr>
-			</c:forEach>
-		</c:if>
-	</table>
+			</c:if>
+			<c:if test="${not empty list }">
+				<c:forEach var="product" items="${list }">
+					<tr  onClick="location.href='productview.do?p_num=${product.p_num }'">
+						<td>${product.p_num }</td>
+						<td><img alt="${product.p_img }" style="max-width: 100%; height: 50px;"
+							src="../fileSave/${product.p_img } "></td>
+						<td>${product.p_name }</td>
+						<td>${product.p_cost }</td>
+						<%-- <td>${product.p_date }</td> --%>
+					</tr>
+				</c:forEach>
+			</c:if>
+		</table>
+	</div>
 </body>
 </html>

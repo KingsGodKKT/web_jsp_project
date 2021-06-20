@@ -2,7 +2,7 @@ package roy.service;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import board.dao.BoardDao;
+import roy.dao.BoardDao;
 public class Delete implements CommandProcess {
 	public String requestPro(HttpServletRequest request, HttpServletResponse response) {
 		int b_num = Integer.parseInt(request.getParameter("b_num"));

@@ -7,8 +7,8 @@ import javax.servlet.http.HttpSession;
 import com.oreilly.servlet.MultipartRequest;
 import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
 
-import board.dao.BoardDao;
-import board.model.Board;
+import roy.dao.BoardDao;
+import roy.model.Board;
 public class InsertBoard implements CommandProcess{
 
 	public String requestPro(HttpServletRequest request, HttpServletResponse response) {
