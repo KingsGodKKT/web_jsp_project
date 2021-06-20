@@ -27,7 +27,7 @@ public class OrderInsert implements CommandProcess {
 		String 	m_id	= "k1";
 		Integer	o_qty	= Integer.parseInt(request.getParameter("o_qty"));
 		Integer	o_cost	= Integer.parseInt(request.getParameter("o_cost"));
-		char	o_pay	= 'N';   
+		String	o_pay	= "N";   
 				
 		
 		System.out.println("o req :" + o_req);

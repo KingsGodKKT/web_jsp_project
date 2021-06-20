@@ -3,13 +3,24 @@
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="porderns">
 	<select id="select" parameterType="string" resultType="porder">
-		select * from porder where id=#{m_id}
+		select *
+		from porder where id=#{m_id}
 	</select>
+
+	<select id="selectList" resultType="porder">
+		select p_num, m_id, o_num, o_req, o_qty,o_cost,o_date ,o_pay from porder
+	</select>
+
+	<update id="update" parameterType="int">
+		update porder set o_pay='Y'
+		where p_num=#{p_num}
+	</update>
 	<insert id="insert" parameterType="porder">
-	<selectKey keyProperty="o_num" resultType="integer" order="BEFORE">
-		select O_NUM_SEQ.nextval FROM DUAL
-	</selectKey>
-		insert into porder(o_num,o_date,o_req,p_num,m_id,o_qty,o_cost) 
-		values (#{o_num},sysdate,#{o_req},#{p_num},#{m_id},#{o_qty},#{o_cost})
+		<selectKey keyProperty="o_num" resultType="integer"
+			order="BEFORE">
+			select O_NUM_SEQ.nextval FROM DUAL
+		</selectKey>
+		insert into porder(o_num,o_date,o_req,p_num,m_id,o_qty,o_cost,o_pay)
+		values (#{o_num},sysdate,#{o_req},#{p_num},#{m_id},#{o_qty},#{o_cost},#{o_pay})
 	</insert>
 </mapper>

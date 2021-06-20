@@ -7,6 +7,12 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link href="../css/bootstrap.min.css" rel="stylesheet">
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script src="../js/bootstrap.min.js"></script>
 <title>Insert title here</title>
 <script type="text/javascript">
 	function order() {
@@ -17,10 +23,11 @@
 		history.go(-1);
 	}
 </script>
+
 </head>
 
 <body>
-
+	<div class="container">
 	<h3>결제</h3>
 	<form name="fmt" action="" method="post">
 		<input type="hidden" name="p_num" value="${product.p_num }">
@@ -28,12 +35,12 @@
 		<input type="hidden" name="p_cost" value="${product.p_cost}">
 		<input type="hidden" name="o_cost" value="${porder.o_cost}">
 		<!-- 상품 -->
-		<table class="table table-hover">
+		<table class="table table-bordered">
 			<tr>
-				<th width="20%">상품번호</th>
-				<th width="20%">상품명</th>
+				<th width="12%">상품번호</th>
+				<th width="40%">상품명</th>
 				<th width="20%">판매가격</th>
-				<th width="20%">수량</th>
+				<th width="8%">수량</th>
 				<th width="20%">총가격</th>
 			</tr>
 			<tr>
@@ -46,12 +53,12 @@
 		</table>
 
 		<!-- 게시물 -->
-		<table>
+		<table class="table table-hover">
 			<tr>
-				<th width="25%">번호</th>
-				<th width="25%">제목</th>
-				<th width="25%">내용</th>
-				<th width="25%">작성일</th>
+				<th width="10%">번호</th>
+				<th width="20%">제목</th>
+				<th width="50%">내용</th>
+				<th width="20%">작성일</th>
 			</tr>
 			<c:forEach var="olist" items="${olist }">
 				<tr>
@@ -123,5 +130,6 @@
 			</tr>
 		</table>
 	</form>
+	</div>
 </body>
 </html>
