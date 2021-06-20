@@ -10,11 +10,12 @@
 		insert into board
 		values(#{b_num},#{b_name},#{b_cnt},sysdate,#{b_view},#{b_shr},#{m_id},#{f_name})
 	</insert>
-	<select resultType="board" id="selectBoardList">select b_num, b_name, b_cnt,
-		b_date from board </select>
+	<select resultType="board" id="selectBoardList">
+	select b_num, b_name, b_cnt, b_date from board </select>
 	<!-- 구매할 게시물 선택 -->
-	<select resultType="board" id="selectOrderList">selectb_num,b_name,b_cnt,b_datefromboardwhereb_num
-		in ${string} </select>
+	<select resultType="board" id="selectOrderList">
+	select b_num,b_name,b_cnt,b_date from board where b_num in ${string} </select>
+	
 	<select id="main_list" parameterType="hashMap"
 		resultType="board">
 		select * from (select rowNum rn, a.* from(select * from

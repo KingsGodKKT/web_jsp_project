@@ -86,7 +86,7 @@ public class OrderBuy implements CommandProcess {
 		//System.out.println("olist:" + olist);
 		
 		
-		return "orderbuy";
+		return "../order/orderbuy";
 	}
 
 }
