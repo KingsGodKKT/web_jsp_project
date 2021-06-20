@@ -9,11 +9,12 @@
 <style type="text/css">@import url("common.css");</style>
 </head>
 <body>
+<input type="button" class="btn black mr5" onclick="location.href='mainlist.bo?pageNum=${pageNum}'" value="기록새록">
 <table><caption>게시글 목록</caption>
 	<tr><th>번호</th><th>제목</th><th>입력일</th><th>조회수</th><th>작성자 ID</th><th>그림</th></tr>
 <c:forEach var="board" items="${list }">
-	<tr><td>${board.b_num }</td>
-	<td><a href="view.bo?b_num=${board.b_num }&pageNum=${currentPage}">${board.b_name }</a></td>
+	<tr onClick="location.href='view.bo?b_num=${board.b_num }&pageNum=${currentPage}'"><td>${board.b_num }</td>
+	<td>${board.b_name }</a></td>
 	<td>${board.b_date }</td>
 	<td>${board.b_view }</td>
 	<td>${board.m_id }</td>

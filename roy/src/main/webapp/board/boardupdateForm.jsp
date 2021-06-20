@@ -5,6 +5,7 @@
 <title>Insert title here</title>
 <link rel="stylesheet" type="text/css" href="common.css">
 </head><body>
+<input type="button" class="btn black mr5" onclick="location.href='mainlist.bo?pageNum=${pageNum}'" value="기록새록">
 <form action="update.bo" enctype="multipart/form-data" method="post" name="frm">
 	<input type="hidden" name="num" value="${board.b_num }">
 	<input type="hidden" name="pageNum" value="${pageNum}">

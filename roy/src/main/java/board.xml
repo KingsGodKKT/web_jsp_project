@@ -18,7 +18,7 @@
 	<select id="main_list" parameterType="hashMap"
 		resultType="board">
 		select * from (select rowNum rn, a.* from(select * from
-		board where m_shr='y' order by b_num desc)a )
+		board where b_shr='y' order by b_num desc)a )
 		where rn between
 		#{startRow} and #{endRow}
 	</select>

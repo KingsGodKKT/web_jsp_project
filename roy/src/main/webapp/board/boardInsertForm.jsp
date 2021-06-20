@@ -8,6 +8,7 @@
 <link rel="stylesheet" type="text/css" href="common.css"/>
 </head>
 <body>
+<input type="button" class="btn black mr5" onclick="location.href='mainlist.bo?pageNum=${pageNum}'" value="기록새록">
 <div id="wrap">
     <div id="container">
         <div class="inner">        

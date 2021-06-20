@@ -4,6 +4,7 @@
 <title>Insert title here</title>
 <style type="text/css">@import url("common.css");</style>
 </head><body>
+<input type="button" class="btn black mr5" onclick="location.href='mainlist.bo?pageNum=${pageNum}'" value="기록새록">
 <form action="delete.bo">
 	<input type="hidden" name="b_num" value="${b_num}">
 	<input type="hidden" name="pageNum" value="${pageNum}">

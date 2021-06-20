@@ -10,6 +10,7 @@
 		$('#disp').load('list.bo');
 	});
 </script></head><body>
+<input type="button" class="btn black mr5" onclick="location.href='mainlist.bo?pageNum=${pageNum}'" value="기록새록">
 <table><caption>게시글 상세 보기</caption>
 	<tr><th width="100">제목</th><td>${board.b_name }</td></tr>
 	<tr><th>작성자id</th><td>${board.m_id }</td></tr>
