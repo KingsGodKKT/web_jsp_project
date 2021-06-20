@@ -22,7 +22,7 @@ import roy.model.ParamObject;
 import roy.model.Porder;
 import roy.model.Product;
 
-public class BuyCheck implements CommandProcess {
+public class BuyCheckForm implements CommandProcess {
 
 	@Override
 	public String requestPro(HttpServletRequest request, HttpServletResponse response) {
@@ -30,14 +30,12 @@ public class BuyCheck implements CommandProcess {
 			request.setCharacterEncoding("utf-8");
 		} catch (UnsupportedEncodingException e1) {}
 		
-		int p_num = Integer.parseInt(request.getParameter("p_num"));
 		
 		OrderDao od = OrderDao.getInstance();		
-		od.update(p_num);
-		int result = od.update(p_num);
-		request.setAttribute("result", result);
+		List<Porder> olist = od.selectList();
+		request.setAttribute("olist", olist);
 
-		return "buycheck";
+		return "buycheckForm";
 	
 	}
 

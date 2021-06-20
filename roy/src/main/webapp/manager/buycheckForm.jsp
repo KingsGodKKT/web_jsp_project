@@ -19,7 +19,7 @@
 </script>
 </head>
 <body>
-	<form action="buycheck.do">
+	<form action="buycheckForm.do">
 		<input type="submit" value="확인">
 	</form>
 	<form action="" name="frm">
@@ -43,17 +43,17 @@
 			</tr>
 		</c:if>
 		<c:if test="${not empty olist }">
-			<c:forEach var="product" items="${olist }">
+			<c:forEach var="porder" items="${olist }">
 				<tr>
-					<td>${product.p_num}</td>
-					<td>${product.m_id }</td>
+					<td>${porder.p_num}</td>
+					<td>${porder.m_id }</td>
 					<td>${porder.o_num }</td>
 					<td>${porder.o_req }</td>
 					<td>${porder.o_qty }</td>
 					<td>${porder.o_cost }</td>
 					<td>${porder.o_date}</td>
 					<td>${porder.o_pay}</td>
-					<td><input type="button"  onclick="buycheck()"value="확인"></td>
+					<td><button type="submit"  onclick="buycheck()" name="p_num"value="${porder.p_num}">확인</button></td>
 				</tr>
 			</c:forEach>
 		</c:if>

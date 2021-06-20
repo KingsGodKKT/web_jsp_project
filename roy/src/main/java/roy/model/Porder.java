@@ -10,12 +10,13 @@ public class Porder {
     
     private Integer o_qty;
     private Integer o_cost;
-    private Character o_pay;   
+    private String o_pay;   
     
-	public Character getO_pay() {
+	
+	public String getO_pay() {
 		return o_pay;
 	}
-	public void setO_pay(Character o_pay) {
+	public void setO_pay(String o_pay) {
 		this.o_pay = o_pay;
 	}
 	public Integer getO_num() {
