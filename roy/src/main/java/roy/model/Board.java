@@ -1,18 +1,22 @@
 package roy.model;
+
 import java.sql.Date;
+
 public class Board {
-	private Integer b_num;
+	
+	private int b_num;
 	private String b_name;
 	private String b_cnt;
 	private Date b_date;
-	private Integer b_view;
-	private Character b_shr;
-	private Character b_cmm; 
+	private int b_view;
+	private String b_shr;
 	private String m_id;
-	public Integer getB_num() {
+	private String f_name;
+	
+	public int getB_num() {
 		return b_num;
 	}
-	public void setB_num(Integer b_num) {
+	public void setB_num(int b_num) {
 		this.b_num = b_num;
 	}
 	public String getB_name() {
@@ -33,23 +37,17 @@ public class Board {
 	public void setB_date(Date b_date) {
 		this.b_date = b_date;
 	}
-	public Integer getB_view() {
+	public int getB_view() {
 		return b_view;
 	}
-	public void setB_view(Integer b_view) {
+	public void setB_view(int b_view) {
 		this.b_view = b_view;
 	}
-	public Character getB_shr() {
+	public String getB_shr() {
 		return b_shr;
 	}
-	public void setB_shr(Character b_shr) {
+	public void setB_shr(String b_shr) {
 		this.b_shr = b_shr;
-	}
-	public Character getB_cmm() {
-		return b_cmm;
-	}
-	public void setB_cmm(Character b_cmm) {
-		this.b_cmm = b_cmm;
 	}
 	public String getM_id() {
 		return m_id;
@@ -57,6 +55,10 @@ public class Board {
 	public void setM_id(String m_id) {
 		this.m_id = m_id;
 	}
-	
-	
+	public String getF_name() {
+		return f_name;
+	}
+	public void setF_name(String f_name) {
+		this.f_name = f_name;
+	}
 }

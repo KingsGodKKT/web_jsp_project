@@ -11,17 +11,17 @@
 	});
 </script></head><body>
 <table><caption>게시글 상세 보기</caption>
-	<tr><th width="100">제목</th><td>${board.subject }</td></tr>
-	<tr><th>작성자id</th><td>${board.userId }</td></tr>
-	<tr><th>조회수</th><td>${board.readcount }</td></tr>
-	<tr><th>작성일</th><td>${board.reg_date }</td></tr>
-	<tr><th>내용</th><td><pre>${board.content }</pre></td></tr>
-	<tr><td>사진</td><td><img alt="" src="upload/${board.filename }"  width="400"> </td></tr>
+	<tr><th width="100">제목</th><td>${board.b_name }</td></tr>
+	<tr><th>작성자id</th><td>${board.m_id }</td></tr>
+	<tr><th>조회수</th><td>${board.b_view }</td></tr>
+	<tr><th>작성일</th><td>${board.b_date }</td></tr>
+	<tr><th>내용</th><td><pre>${board.b_cnt }</pre></td></tr>
+	<tr><td>사진</td><td><img alt="" src="upload/${board.f_name }"  width="400"> </td></tr>
 </table>
 	<div class="btn_right mt15">
-    	<input type="button" class="btn black mr5" onclick="location.href='list.bo&pageNum=${pageNum}'" value="게시글 목록">
-    	<input type="button" class="btn black mr5" onclick="location.href='updateForm.bo?num=${board.num}&pageNum=${pageNum}'" value="수정">
-    	<input type="button" class="btn black mr5" onclick="location.href='deleteForm.bo?num=${board.num}&pageNum=${pageNum}'" value="삭제">
+    	<input type="button" class="btn black mr5" onclick="location.href='list.bo?pageNum=${pageNum}'" value="게시글 목록">
+    	<input type="button" class="btn black mr5" onclick="location.href='updateForm.bo?b_num=${board.b_num}&pageNum=${pageNum}'" value="수정">
+    	<input type="button" class="btn black mr5" onclick="location.href='deleteForm.bo?b_num=${board.b_num}&pageNum=${pageNum}'" value="삭제">
 	</div>
 </body>
 </html>

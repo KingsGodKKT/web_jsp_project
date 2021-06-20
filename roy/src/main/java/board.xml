@@ -2,40 +2,37 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="boardns">
-	<select id="select" parameterType="string" resultType="board">
-		select * from board where id=#{m_id} or b_name = #{b_name}
-	</select>
-	<!-- 게시물 받아오기 -->
-	<select id="selectBoardList" resultType="board" >
-		select b_num, b_name, b_cnt, b_date from board 
-	</select>
-	
-
-	<!-- 구매할 게시물 선택 -->
-	<select id="selectOrderList" resultType="board" >
-		select 
-			b_num
-			,b_name
-			,b_cnt
-			,b_date 
-		from 
-			board 
-		where 
-			b_num in ${string}  
-			
-	</select>
-	
-
-	
 	<insert id="insert" parameterType="board">
-		insert into board values (#{b_num},#{b_name},#{b_cnt},sysdate,
-			#{b_view},#{b_shr},#{b_cmm},#{m_id})
+		<selectKey keyProperty="b_num" order="BEFORE" resultType="integer">
+			select nvl(max(b_num), 0) + 1 b_num from board
+		</selectKey>
+		insert into board values(#{b_num},#{b_name},#{b_cnt},sysdate,#{b_view},#{b_shr},#{m_id},#{f_name})
 	</insert>
-	<update id="update" parameterType="board">
-		update board set b_name=#{b_name},b_cnt=#{b_cnt},sysdate,
-		b_shr=#{b_shr},b_cmm=#{b_cmm} where id=#{b_num}
+	<select id="main_list" parameterType="hashMap" resultType="board">
+		select * from (select rowNum rn, a.* from(select * from board where m_shr='y' order by b_num desc)a )
+		where rn between #{startRow} and #{endRow}
+	</select>
+		<select id="list" parameterType="hashMap" resultType="board">
+		select * from (select rowNum rn, a.* from(select * from board where m_id=#{m_id} order by b_num desc)a )
+		where rn between #{startRow} and #{endRow}
+	</select>
+	<update id="readcoutUpdate" parameterType="integer">
+		update board set b_view = b_view + 1 where b_num=#{b_num}
 	</update>
-	<delete id="delete" parameterType="int">
-		delete board where b_num = #{b_num}
+	<select id="select" parameterType="integer" resultType="board">
+		select * from board where b_num=#{b_num}
+	</select>
+	<update id="update" parameterType="board">
+		update board set b_name=#{b_name}, b_cnt=#{b_cnt}
+		<if test="f_name!=null and f_name!=''">
+			,f_name=#{f_name}
+		</if>
+		where b_num=#{b_num}
+	</update>
+	<delete id="delete" parameterType="integer">
+		delete from board where b_num=#{b_num}
 	</delete>
+	<select id="getTotal" resultType="integer">
+		select count(*) from board
+	</select>
 </mapper>
