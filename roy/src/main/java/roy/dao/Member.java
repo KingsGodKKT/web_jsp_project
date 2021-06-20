@@ -1,4 +1,4 @@
-package roy.member;
+package roy.dao;
 import java.sql.Date;
 public class Member {
 	private String m_id;
