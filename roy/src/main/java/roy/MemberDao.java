@@ -66,22 +66,23 @@ public class MemberDao {
 		}
 		return result;
 	}
-	public int loginChk(String id, String passwd) {
+	public int loginChk(String m_id, String m_pass) {
 		int result = 0;	Connection conn = null;
 		PreparedStatement pstmt = null; ResultSet rs = null;
 		String sql = 
-			"select password from member2 where id=? and del!='y'";
+			"select m_pass from Rmember where m_id=? and m_del!='y'";
 		try {
 			conn  = getConnection();
 			pstmt = conn.prepareStatement(sql);
-			pstmt.setString(1, id);
+			pstmt.setString(1, m_id);
 			rs    = pstmt.executeQuery();
 			if (rs.next()) {
 				// String dbPass = rs.getString("password");
 				String dbPass = rs.getString(1);
-				if (dbPass.equals(passwd)) result = 1;
+				if (dbPass.equals(m_pass)) result = 1;
 				else result = 0;
 			} else result   = -1;
+			
 		}catch(Exception e) { System.out.println(e.getMessage());			
 		}finally {
 			try{if (rs    != null) rs.close();
@@ -89,6 +90,7 @@ public class MemberDao {
 				if (conn  != null) conn.close();
 			}catch(Exception e) {}
 		}
+		System.out.println("result" +result);
 		return result;
 	}
 	public Member select(String id) {
