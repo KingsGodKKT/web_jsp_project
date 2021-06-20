@@ -5,5 +5,6 @@ drop sequence o_num_seq;
 
 select * from PORDER;
 select * from PRODUCT;
-
+select * from RMEMBER;
 select * from BOARD;
+select * from RMEMBER;

@@ -11,15 +11,15 @@
 <body>
 	<header>
 		<nav>
-			<a href="index.jsp"><img class="logo" alt=""
+			<a href="../index.jsp"><img class="logo" alt=""
 				src="../image/기록새록.png"></a>
 			<ul>
-				<li><a class="active" href="menber/loginForm.jsp">로그인</a></li>
-				<li><a href="menber/joinForm.jsp">회원가입</a></li>
+				<li><a class="active" href="loginForm.jsp">로그인</a></li>
+				<li><a href="joinForm.jsp">회원가입</a></li>
 			</ul>
 		</nav>
 	</header>
-	<form action="login.jsp" class="loginForm">
+	<form action="login.do" class="loginForm">
 		<table class="loginTable">
 			<caption>로그인</caption>
 			<tr>

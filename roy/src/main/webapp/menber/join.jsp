@@ -6,7 +6,8 @@
 <%	request.setCharacterEncoding("utf-8"); %>
 <jsp:useBean id="member" class="roy.dao.Member"></jsp:useBean>
 <jsp:setProperty property="*" name="member"/>
-<%	MemberDao md = MemberDao.getInstance();
+<%
+MemberDao2 md = MemberDao2.getInstance();
 	int result   = md.insert(member);
 	if (result >0) {
 %>

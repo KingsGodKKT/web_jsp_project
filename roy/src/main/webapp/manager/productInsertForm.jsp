@@ -9,6 +9,7 @@
 <script type="text/javascript" src="checkScript.js"></script>
 </head>
 <body>
+<jsp:include page="../module/top.jsp" />
 	<div align="center">
 		<h2>상품 등록</h2>
 		<form method="post" name="writeform" action="productInsert.do"

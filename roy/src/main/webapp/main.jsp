@@ -32,9 +32,9 @@
 			} else {
 			%>
 			<ul>
-				<li><a href="">게시글</a></li>
-				<li><a href="menber/loginForm.jsp">포토북</a></li>
-				<li><a href="menber/logout.jsp">로그아웃</a></li>
+				<li><a href="board/mainlist.bo">게시글</a></li>
+				<li><a href="product/productlistview.do">포토북</a></li>
+				<li><a href="logout.do">로그아웃</a></li>
 			</ul>
 			<%
 			}

@@ -11,12 +11,11 @@
 <link href="../css/bootstrap.min.css" rel="stylesheet">
 <script type="text/javascript" src="../js/jquery.js"></script>
 <script src="../js/bootstrap.min.js"></script>
+
 </head>
 <body>
+	<jsp:include page="../module/top.jsp" />
 	<div class="container">
-		<form action="productlistview.do">
-			<input type="submit" value="확인">
-		</form>
 		<table class="table table-hover">
 			<tr>
 				<th width="25%">상품번호</th>
@@ -31,9 +30,11 @@
 			</c:if>
 			<c:if test="${not empty list }">
 				<c:forEach var="product" items="${list }">
-					<tr  onClick="location.href='productview.do?p_num=${product.p_num }'">
+					<tr
+						onClick="location.href='productview.do?p_num=${product.p_num }'">
 						<td>${product.p_num }</td>
-						<td><img alt="${product.p_img }" style="max-width: 100%; height: 50px;"
+						<td><img alt="${product.p_img }"
+							style="max-width: 100%; height: 50px;"
 							src="../fileSave/${product.p_img } "></td>
 						<td>${product.p_name }</td>
 						<td>${product.p_cost }</td>

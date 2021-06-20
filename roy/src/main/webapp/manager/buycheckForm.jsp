@@ -19,6 +19,7 @@
 </script>
 </head>
 <body>
+<jsp:include page="../module/top.jsp" />
 	<div class="container">
 		<form action="buycheckForm.do">
 			<input type="submit" value="확인">

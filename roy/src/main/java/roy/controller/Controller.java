@@ -14,7 +14,9 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
+import roy.dao.MemberDao;
 import roy.service.CommandProcess;
 
 @WebServlet(urlPatterns={"*.do","*.bo"},	
@@ -89,5 +91,6 @@ public class Controller extends HttpServlet {
 	    throws ServletException, IOException {
     		request.setCharacterEncoding("utf-8");
     		doGet(request, response);
+    	
 	}
 }

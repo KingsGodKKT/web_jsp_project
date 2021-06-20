@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="rmenberns">
+<mapper namespace="rmemberns">
+
+	<select id="loginChk" parameterType="string" resultType="string">
+		select m_pass from rmember where m_id=#{m_id} and m_del !='y'
+	</select>
+	<select id="login" parameterType="string"  resultType="string">
+		select m_id from rmember where m_id=#{m_id} and m_del !='y'
+	</select>
+
+<!-- select password from member2 where id=? and del!='y' -->
+
 <!-- 	<select id="select" parameterType="string" resultType="menber">
 		select * from menber where id=#{id} 
 	</select>

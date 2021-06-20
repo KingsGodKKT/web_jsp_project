@@ -23,8 +23,8 @@
 </head>
 
 <body>
+	<jsp:include page="../module/top.jsp" />
 	<div class="container">
-
 		<h3>포토북 인화 사진 선택</h3>
 		<form action="" name="frm">
 			<input type="hidden" name="p_num" value="${product.p_num }">

@@ -5,11 +5,11 @@ import java.util.List;
 
 import javax.sql.*;
 import javax.naming.*;
-public class MemberDao {
-	private static MemberDao instance; // = new MemberDao();
-	private MemberDao() {	}
-	public static MemberDao getInstance() {
-		if (instance == null) instance = new MemberDao();
+public class MemberDao2 {
+	private static MemberDao2 instance; // = new MemberDao();
+	private MemberDao2() {	}
+	public static MemberDao2 getInstance() {
+		if (instance == null) instance = new MemberDao2();
 		return instance;
 	}
 	private Connection getConnection() {
