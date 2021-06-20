@@ -23,6 +23,6 @@ public class ProductListView implements CommandProcess {
 		
 		request.setAttribute("list", list);
 
-		return "productlistview";
+		return "../product/productlistview";
 	}
 }

@@ -4,5 +4,6 @@ nocycle nocache;
 drop sequence o_num_seq;
 
 select * from PORDER;
+select * from PRODUCT;
 
 select * from BOARD;
