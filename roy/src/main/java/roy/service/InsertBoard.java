@@ -43,7 +43,7 @@ public class InsertBoard implements CommandProcess{
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
 		}
-		return "/board/insertBoard";
+		return "board/insertBoard";
 	}
 
 }

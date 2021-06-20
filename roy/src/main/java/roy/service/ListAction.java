@@ -39,7 +39,7 @@ public class ListAction implements CommandProcess {
 		request.setAttribute("startPage", startPage);
 		request.setAttribute("endPage", endPage);
 		request.setAttribute("totalPage", totalPage);
-		return "/board/boardList";
+		return "board/boardList";
 	}
 
 }

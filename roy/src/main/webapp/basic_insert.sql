@@ -6,11 +6,11 @@ insert into rmember values ('k2', '1234', '이하나', '9808081234567', '43210',
 
 
 --게시물 3개 공지여부 2개 댓글 1개
-insert into board values ('1', '크루엘라 썰', '영화관을 다녀왔다', SYSDATE, '0', 'y',
+--insert into board values ('1', '크루엘라 썰', '영화관을 다녀왔다', SYSDATE, '0', 'y',
                             'y', 'k1');
-insert into board values ('2', '컨저링', '공포영화 무서워', SYSDATE, '0', 'y',
+--insert into board values ('2', '컨저링', '공포영화 무서워', SYSDATE, '0', 'y',
                             'n', 'k1');
-insert into board values ('3', '아웃백', '맛있어', SYSDATE, '0', 'n',
+--insert into board values ('3', '아웃백', '맛있어', SYSDATE, '0', 'n',
                             'n', 'k2');
                             
 -- 상품 추가
