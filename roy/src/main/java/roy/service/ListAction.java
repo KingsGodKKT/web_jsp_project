@@ -6,8 +6,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import board.dao.BoardDao;
-import board.model.Board;
+import roy.dao.BoardDao;
+import roy.model.Board;
 
 public class ListAction implements CommandProcess {
 

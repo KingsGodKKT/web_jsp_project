@@ -3,8 +3,8 @@ package roy.service;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import board.dao.BoardDao;
-import board.model.Board;
+import roy.dao.BoardDao;
+import roy.model.Board;
 
 public class ViewAction implements CommandProcess{
 

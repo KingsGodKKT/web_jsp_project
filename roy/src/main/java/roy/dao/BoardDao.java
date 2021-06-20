@@ -11,7 +11,7 @@ import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
-import board.model.Board;
+import roy.model.Board;
 public class BoardDao {
 	private static BoardDao instance = new BoardDao();
 	private BoardDao() {}
