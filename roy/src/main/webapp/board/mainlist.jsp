@@ -14,10 +14,10 @@
 <body class="darkContainer">
 	<jsp:include page="../module/top.jsp" />
 	<div class="bodyContainer">
-		<div class="writeButtonBox">
+		<!-- <div class="writeButtonBox">
 			<input type="button" class="wirteButton"
 				onclick="location.href='boardInsertForm.bo'" value="글쓰기">
-		</div>
+		</div> -->
 		<section class="posts">
 			<c:forEach var="board" items="${list }">
 				<div class="post"

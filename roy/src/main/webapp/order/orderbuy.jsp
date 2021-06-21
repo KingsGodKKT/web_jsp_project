@@ -9,10 +9,29 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
+<link href="product.css?after" rel="stylesheet">
 <link href="../css/bootstrap.min.css" rel="stylesheet">
 <script type="text/javascript" src="../js/jquery.js"></script>
 <script src="../js/bootstrap.min.js"></script>
+<style>
+header {
+	height: 100px;
+	border-radius: 15px;
+	font-family: 'Nanum Gothic', sans-serif;
+	text-align: center;
+}
+
+footer {
+	font-family: 'Nanum Gothic', sans-serif;
+	text-align: center;
+}
+
+ul.nav {
+	background-color: rgba(201, 201, 201, .5);
+	padding: 10px;
+	border-radius: 10px;
+}
+</style>
 <title>Insert title here</title>
 <script type="text/javascript">
 	function order() {
@@ -29,7 +48,7 @@
 <body>
 	<jsp:include page="../module/top.jsp" />
 	<div class="container">
-		<h3>결제</h3>
+		<h3 align="center">결제</h3>
 		<form name="fmt" action="" method="post">
 			<input type="hidden" name="p_num" value="${product.p_num }">
 			<input type="hidden" name="o_qty" value="${porder.o_qty }"> <input
@@ -55,46 +74,52 @@
 
 			<!-- 게시물 -->
 			<table class="table table-hover">
-				
 				<tr>
 					<th width="10%">번호</th>
 					<th width="20%">제목</th>
 					<th width="50%">내용</th>
 					<th width="20%">작성일</th>
 				</tr>
-				<c:forEach var="olist" items="${olist }">
+				<c:if test="${empty olist}">
 					<tr>
-						<td>${olist.b_num }</td>
-						<%-- <td><img alt="${product.p_img }" src="../fileSave/${product.p_img } "></td> --%>
-						<td>${olist.b_name }</td>
-						<td>${olist.b_cnt  }</td>
-						<td>${olist.b_date  }</td>
+						<th colspan=5">선택한 게시물이 없습니다</th>
 					</tr>
-				</c:forEach>
+				</c:if>
+				<c:if test="${not empty olist }">
+					<c:forEach var="olist" items="${olist }">
+						<tr>
+							<td>${olist.b_num }</td>
+							<%-- <td><img alt="${product.p_img }" src="../fileSave/${product.p_img } "></td> --%>
+							<td>${olist.b_name }</td>
+							<td>${olist.b_cnt  }</td>
+							<td>${olist.b_date  }</td>
+						</tr>
+					</c:forEach>
+				</c:if>
 			</table>
 
-			
+
 			<!-- 배송 결제 -->
 			<table width="600" border="1" cellspacing="0" cellpadding="3"
-				align="center">
-				<tr>
+				align="center" class="table table-bordered">
+				<tr class="active">
 					<td colspan="2" align="center"><font size="+1"><b>주문자
 								정보</b></font></td>
 				</tr>
-				<tr>
-					<td width="200">성명</td>
-					<td width="400">${omlist[0].m_name}</td>
+				<tr bgcolor="#E5E1D8">
+					<td width="20%"><b>성명</b></td>
+					<td width="80%">${omlist[0].m_name}</td>
 				</tr>
-				<tr>
-					<td>전화번호</td>
+				<tr bgcolor="#E5E1D8">
+					<td><b>전화번호</b></td>
 					<td>${omlist[0].m_tel}</td>
 				</tr>
-				<tr>
-					<td>주소</td>
+				<tr bgcolor="#E5E1D8">
+					<td><b>주소</b></td>
 					<td>${omlist[0].m_addr}</td>
 				</tr>
-				<tr>
-					<td>결제계좌</td>
+				<tr bgcolor="#E5E1D8">
+					<td><b>결제계좌</b></td>
 					<td><select name="d_bank">
 							<option value="카카오뱅크 1111-111-1111">카카오뱅크 1111-111-1111</option>
 					</select></td>
@@ -103,33 +128,36 @@
 			<br>
 
 			<table width="600" border="1" cellspacing="0" cellpadding="3"
-				align="center">
-				<tr>
+				align="center" class="table table-bordered">
+				<tr class="warning">
 					<td colspan="2" align="center"><font size="+1"><b>배송지
 								정보</b></font></td>
 				</tr>
 
 				<tr>
-					<td width="200">성명</td>
-					<td width="400"><input type="text" name="d_name" value="${omlist[0].m_name}">
-					</td>
+					<td width="20%"><b>성명</b></td>
+					<td width="80%"><input type="text" name="d_name"
+						placeholder="${omlist[0].m_name}"></td>
 				</tr>
 				<tr>
-					<td>전화번호</td>
-					<td><input type="text" name="d_tel" value="${omlist[0].m_tel}"></td>
+					<td><b>전화번호</b></td>
+					<td><input type="text" name="d_tel" placeholder="${omlist[0].m_tel}"></td>
 				</tr>
 				<tr>
-					<td>주소</td>
-					<td><input type="text" name="d_addr" value="${omlist[0].m_addr}"></td>
+					<td><b>주소</b></td>
+					<td><input type="text" name="d_addr"
+						placeholder="${omlist[0].m_addr}" ></td>
 				</tr>
 				<tr>
-					<td>주문시 요청사항</td>
-					<td><input type="text" name="o_req" value="조심히 와주세요!"></td>
+					<td><b>주문시 요청사항</b></td>
+					<td><input type="text" name="o_req"  placeholder="조심히 와주세요"
+					></td>
 				</tr>
 				<tr>
 					<td colspan="2" align="center"><input type="button" value="확인"
-						onclick="order()"> <input type="button" value="취소"
-						onclick="cancel()"></td>
+						class="submitButton" onclick="order()"> <input
+						type="button" value="취소" class="submitButton" onclick="cancel()">
+					</td>
 				</tr>
 			</table>
 		</form>

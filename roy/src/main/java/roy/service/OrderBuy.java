@@ -37,7 +37,9 @@ public class OrderBuy implements CommandProcess {
 		Date o_date = new Date(System.currentTimeMillis());//현재시간을 가져와 Date형으로 저장한다
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
 		
-		String str = "(";
+		String str = null;
+		if(oboard != null) {
+		str = "(";
 	    int i=0;
 	    for( String select_id : oboard){
 	       str += select_id;
@@ -47,8 +49,10 @@ public class OrderBuy implements CommandProcess {
 	          i++;
 	      }
 	    str += ")";
+		}
 	    
-		System.out.println(str);
+	    
+		//System.out.println(str);
 		Integer o_cost = o_qty * p_cost;
 		
 		//for(String i : oboard)System.out.println("oboard:" +i);

@@ -9,10 +9,29 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
+<link href="product.css?after" rel="stylesheet">
 <link href="../css/bootstrap.min.css" rel="stylesheet">
 <script type="text/javascript" src="../js/jquery.js"></script>
 <script src="../js/bootstrap.min.js"></script>
+<style>
+header {
+	height: 100px;
+	border-radius: 15px;
+	font-family: 'Nanum Gothic', sans-serif;
+	text-align: center;
+}
+
+footer {
+	font-family: 'Nanum Gothic', sans-serif;
+	text-align: center;
+}
+
+ul.nav {
+	background-color: rgba(201, 201, 201, .5);
+	padding: 10px;
+	border-radius: 10px;
+}
+</style>
 <title>Insert title here</title>
 <script type="text/javascript">
 	function order() {
@@ -25,7 +44,7 @@
 <body>
 	<jsp:include page="../module/top.jsp" />
 	<div class="container">
-		<h3>포토북 인화 사진 선택</h3>
+		<h3 align="center">포토북 인화 사진 선택</h3>
 		<form action="" name="frm">
 			<input type="hidden" name="p_num" value="${product.p_num }">
 			<input type="hidden" name="p_name" value="${product.p_name }">
@@ -48,26 +67,26 @@
 			<div class="col-md-6">
 				<table class="table">
 					<tr>
-						<td>상품번호</td>
+						<td><b>상품번호</b></td>
 						<td>${product.p_num }</td>
 					</tr>
 
 					<tr>
-						<td>상품명</td>
+						<td><b>상품명</b></td>
 						<td>${product.p_name }</td>
 					</tr>
 
 					<tr>
-						<td>커버</td>
+						<td><b>커버</b></td>
 						<td>${product.p_cov }</td>
 					</tr>
 
 					<tr>
-						<td>사이즈</td>
+						<td><b>사이즈</b></td>
 						<td>${product.p_size }</td>
 					</tr>
 					<tr>
-						<td>수량</td>
+						<td><b>구입수량</b></td>
 						<td><input type="number" size="2" min="1" name="o_qty"
 							required="required" value="1"></td>
 					</tr>
@@ -75,10 +94,10 @@
 				<br> <b>인화글 선택</b> </br> <br>
 				<table class="table table-hover">
 					<thead>
-						<th width="7%">번호</th>
+						<th width="10%">번호</th>
 						<th width="25%">제 목</th>
 						<th width="60%">내용</th>
-						<th width="8%">작성일</th>
+						<th width="5%">작성일</th>
 					</thead>
 					<tbody>
 						<c:if test="${empty blist}">
@@ -99,8 +118,12 @@
 							</c:forEach>
 						</c:if>
 						<tr>
-							<td colspan="4"><input type="submit" onclick="order()"
-								value="구매"></td>
+							<td colspan="4">
+								<div class="submitButtonBox">
+									<input type="submit" class="submitButton" onclick="order()"
+										value="구매">
+								</div>
+							</td>
 						</tr>
 					</tbody>
 				</table>
