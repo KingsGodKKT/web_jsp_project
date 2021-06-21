@@ -7,6 +7,57 @@
 String path = request.getContextPath();
 if (session.getAttribute("m_id") == null) {
 %>
+
+<style type="text/css">
+
+nav {
+   display: flex;
+   flex-direction: row;
+   position: fixed; width : 100%;
+   height: 90px;
+   border-bottom: 1px solid #e5e5e5;
+   width: 100%;
+   background: white;
+   z-index: 1;
+}
+
+.logo {
+   margin-left: 40px;
+   margin-top: 7px;
+   width: 180px;
+   height: 70px;
+}
+
+ul {
+   display: flex;
+   flex-direction: row;
+   position: absolute;
+   list-style: none;
+   right: 40px;
+   top: 30px;
+}
+
+li>a {
+   margin-left: 20px;
+   margin-top: 20px;
+   text-decoration: none;
+   font-size: 17px;
+   font-weight: bold;
+   color: black;
+
+}
+
+li>a:hover {
+   text-decoration: underline 2px;
+   transition : 0.5 ease;
+}
+
+.active {
+   color: rgb(000, 000, 153);   
+   font-weight: 600;
+   cursor: pointer;
+}
+</style>
 </head>
 <body>
 	<header>
