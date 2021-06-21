@@ -362,3 +362,15 @@ h1 {
     transition-timing-function: ease;
 }
 
+.deleteForm {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	margin: 100px auto;
+	border: 1px solid #e5e5e5;
+	width: 450px;
+	height:300px;
+	text-align: center;
+	border-radius: 5px;
+}
+
