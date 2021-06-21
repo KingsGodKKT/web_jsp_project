@@ -12,7 +12,7 @@ import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
-
+import roy.model.Product;
 import roy.model.Rmember;
 
 public class MemberDao {
@@ -59,5 +59,9 @@ public class MemberDao {
 		result = session.insert("rmemberns.insert", rme);
 		return result;
 	}
-
+	public List<Rmember> selectOMemberList(String m_id) {
+        List<Rmember> omlist = session.selectList("rmemberns.selectOMemberList",m_id);
+        System.out.println("omlist :" + omlist);
+        return omlist;
+    }
 }

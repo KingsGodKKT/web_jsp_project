@@ -11,7 +11,9 @@
 		values(#{b_num},#{b_name},#{b_cnt},sysdate,#{b_view},#{b_shr},#{m_id},#{f_name})
 	</insert>
 	<select resultType="board" id="selectBoardList">
-	select b_num, b_name, b_cnt, b_date from board </select>
+		select b_num, b_name, b_cnt, b_date from board where m_id=#{m_id} 
+	</select>
+	
 	<!-- 구매할 게시물 선택 -->
 	<select resultType="board" id="selectOrderList">
 	select b_num,b_name,b_cnt,b_date from board where b_num in ${string} </select>

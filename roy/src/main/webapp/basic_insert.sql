@@ -1,7 +1,6 @@
 --멤버 2명 추가 k1 k2
-insert into rmember values ('k1', '1234', '김하나', '9707071234567', '01234', '강남구 이화로10길 401',
-                            'k1@naver.com', '01012341597', sysdate, 'n');
-insert into rmember values ('k2', '1234', '이하나', '9808081234567', '43210', '용산구 이태원로19길 1층',
+insert into rmember values ('k1', '1234', '김하나', '강남구 이화로10길 401','k1@naver.com', '01012341597', sysdate, 'n');
+insert into rmember values ('k2', '1234', '이하나', '용산구 이태원로19길 1층',
                             'k2@naver.com', '01045683579', sysdate, 'n');
 
 

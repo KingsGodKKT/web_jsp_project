@@ -162,8 +162,6 @@ CREATE TABLE RMEMBER
     m_id    VARCHAR2(20) NOT NULL,
     m_pass    VARCHAR2(20) NOT NULL,
     m_name    VARCHAR2(15) NOT NULL,
-    m_ssn    INTEGER NOT NULL,
-    m_post    INTEGER NOT NULL,
     m_addr    VARCHAR2(100) NOT NULL,
     m_mail    VARCHAR2(100) NOT NULL,
     m_tel    VARCHAR2(15) NOT NULL,
@@ -176,10 +174,6 @@ COMMENT ON COLUMN RMEMBER.m_id IS '아이디';
 COMMENT ON COLUMN RMEMBER.m_pass IS '암호';
 
 COMMENT ON COLUMN RMEMBER.m_name IS '이름';
-
-COMMENT ON COLUMN RMEMBER.m_ssn IS '주민번호';
-
-COMMENT ON COLUMN RMEMBER.m_post IS '우편번호';
 
 COMMENT ON COLUMN RMEMBER.m_addr IS '주소';
 

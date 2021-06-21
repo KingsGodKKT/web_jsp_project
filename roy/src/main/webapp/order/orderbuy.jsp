@@ -55,6 +55,7 @@
 
 			<!-- 게시물 -->
 			<table class="table table-hover">
+				
 				<tr>
 					<th width="10%">번호</th>
 					<th width="20%">제목</th>
@@ -72,6 +73,7 @@
 				</c:forEach>
 			</table>
 
+			
 			<!-- 배송 결제 -->
 			<table width="600" border="1" cellspacing="0" cellpadding="3"
 				align="center">
@@ -81,15 +83,15 @@
 				</tr>
 				<tr>
 					<td width="200">성명</td>
-					<td width="400">db 입략</td>
+					<td width="400">${omlist[0].m_name}</td>
 				</tr>
 				<tr>
 					<td>전화번호</td>
-					<td>db 입략</td>
+					<td>${omlist[0].m_tel}</td>
 				</tr>
 				<tr>
 					<td>주소</td>
-					<td>db 입략</td>
+					<td>${omlist[0].m_addr}</td>
 				</tr>
 				<tr>
 					<td>결제계좌</td>
@@ -109,20 +111,20 @@
 
 				<tr>
 					<td width="200">성명</td>
-					<td width="400"><input type="text" name="d_name" value="db입력">
+					<td width="400"><input type="text" name="d_name" value="${omlist[0].m_name}">
 					</td>
 				</tr>
 				<tr>
 					<td>전화번호</td>
-					<td><input type="text" name="d_tel" value="db입력"></td>
+					<td><input type="text" name="d_tel" value="${omlist[0].m_tel}"></td>
 				</tr>
 				<tr>
 					<td>주소</td>
-					<td><input type="text" name="d_addr" value="db입력"></td>
+					<td><input type="text" name="d_addr" value="${omlist[0].m_addr}"></td>
 				</tr>
 				<tr>
 					<td>주문시 요청사항</td>
-					<td><input type="text" name="o_req" value=""></td>
+					<td><input type="text" name="o_req" value="조심히 와주세요!"></td>
 				</tr>
 				<tr>
 					<td colspan="2" align="center"><input type="button" value="확인"

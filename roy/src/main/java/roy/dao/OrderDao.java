@@ -46,6 +46,7 @@ public class OrderDao {
         System.out.println("olist :" + olist);
         return olist;
     }
+	
 	public int update(int p_num) {
 		int result = 0;
 		result = session.insert("porderns.update", p_num);

@@ -35,6 +35,7 @@
 			<input type="hidden" name="p_cov" value="${product.p_cov }">
 			<input type="hidden" name="p_date" value="${product.p_date }">
 			<input type="hidden" name="p_img" value="${product.p_img }">
+			<input type="hidden" name="m_id" value="${m_id }">
 			<div class="col-md-4">
 				<table>
 					<tr>
@@ -80,16 +81,23 @@
 						<th width="8%">작성일</th>
 					</thead>
 					<tbody>
-						<c:forEach var="blist" items="${blist }">
+						<c:if test="${empty blist}">
 							<tr>
-								<td><input type="checkbox" name="oboard" id="oboard"
-									value="${blist.b_num }"> ${blist.b_num }</td>
-								<%-- <td><img alt="${product.p_img }" src="../fileSave/${product.p_img } "></td> --%>
-								<td>${blist.b_name }</td>
-								<td>${blist.b_cnt  }</td>
-								<td>${blist.b_date  }</td>
+								<th colspan=5">등록된 상품이 없습니다</th>
 							</tr>
-						</c:forEach>
+						</c:if>
+						<c:if test="${not empty blist }">
+							<c:forEach var="blist" items="${blist }">
+								<tr>
+									<td><input type="checkbox" name="oboard" id="oboard"
+										value="${blist.b_num }"> ${blist.b_num }</td>
+									<%-- <td><img alt="${product.p_img }" src="../fileSave/${product.p_img } "></td> --%>
+									<td>${blist.b_name }</td>
+									<td>${blist.b_cnt  }</td>
+									<td>${blist.b_date  }</td>
+								</tr>
+							</c:forEach>
+						</c:if>
 						<tr>
 							<td colspan="4"><input type="submit" onclick="order()"
 								value="구매"></td>

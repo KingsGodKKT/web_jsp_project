@@ -9,12 +9,12 @@
 </head>
 <body>
 <!-- 로그인이 될 때 -->
-<c:set var="id" value="${sessionScope['id'] }"></c:set>
+<c:set var="m_id" value="${sessionScope['m_id'] }"></c:set>
 <!-- 로그인이 안될 때, id가 비어있을 때는 loginForm.do로 넘어감 -->
-<c:if test="${empty id }">
+<%-- <c:if test="${empty m_id }">
 	<script type="text/javascript">
-		location.href="loginForm.do";
+		location.href="/loginForm.do";
 	</script>
-</c:if>
+</c:if> --%>
 </body>
 </html>
