@@ -12,7 +12,7 @@ public class MainlistAction implements CommandProcess {
 
 	@Override
 	public String requestPro(HttpServletRequest request, HttpServletResponse response) {
-		final int ROW_PER_PAGE = 5;
+		final int ROW_PER_PAGE = 4;
 		final int PAGE_PER_BLOCK = 10;
 		String pageNum = request.getParameter("pageNum");
 		if (pageNum == null || pageNum.equals("")) pageNum = "1";
