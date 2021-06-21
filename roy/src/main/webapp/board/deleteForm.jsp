@@ -5,25 +5,24 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<link href="../css/bootstrap.min.css" rel="stylesheet">
+<link href="board.css" rel="stylesheet">
 <script type="text/javascript" src="../js/jquery.js"></script>
 <script src="../js/bootstrap.min.js"></script>
 </head>
 <body>
 	<jsp:include page="../module/top.jsp" />
-	<div class="container">
-
-		<input type="button" class="btn black mr5"
-			onclick="location.href='mainlist.bo?pageNum=${pageNum}'" value="기록새록">
-		<form action="delete.bo">
+	<div class="bodyContainer">
+		<form class="deleteForm" action="delete.bo">
 			<input type="hidden" name="b_num" value="${b_num}"> <input
 				type="hidden" name="pageNum" value="${pageNum}">
-			<table class="table table-hover">
-				<caption>게시글을 삭제하시겠습니까?</caption>
-				<tr>
-					<th colspan="2"><input type="submit" value="확인"></th>
-				</tr>
-			</table>
+			<div>
+				<h2>게시물을</h2>
+				<h2>삭제하시겠습니까?</h2>
+			</div>
+			<div>
+				<input class="listButton" type="submit" value="확인">
+			</div>
+
 		</form>
 	</div>
 </body>
