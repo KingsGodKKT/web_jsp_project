@@ -1,285 +1,294 @@
 @import
-	url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap')
-	;
+   url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap')
+   ;
 
 body {
-	display: flex;
-	flex-direction: column;
-	flex: 1;
-	margin: 0;
-	padding: 0;
-	width: 100%;
-	height: 100%;
-	font-family: 'Noto Sans KR', sans-serif;
+   display: flex;
+   flex-direction: column;
+   flex: 1;
+   margin: 0;
+   padding: 0;
+   width: 100%;
+   height: 100%;
+   font-family: 'Noto Sans KR', sans-serif;
 }
 
 nav {
-	display: flex;
-	flex-direction: row;
-	position: fixed;
-	width: 100%;
-	height: 90px;
-	border-bottom: 1px solid #e5e5e5;
-	width: 100%;
-	background: white;
-	z-index: 1;
+   display: flex;
+   flex-direction: row;
+   position: fixed;
+   width: 100%;
+   height: 90px;
+   border-bottom: 1px solid #e5e5e5;
+   width: 100%;
+   background: white;
+   z-index: 1;
 }
 
 .logo {
-	margin-left: 40px;
-	margin-top: 7px;
-	width: 180px;
-	height: 70px;
+   margin-left: 40px;
+   margin-top: 7px;
+   width: 180px;
+   height: 70px;
 }
 
 ul {
-	display: flex;
-	flex-direction: row;
-	position: absolute;
-	list-style: none;
-	right: 40px;
-	top: 30px;
+   display: flex;
+   flex-direction: row;
+   position: absolute;
+   list-style: none;
+   right: 40px;
+   top: 30px;
 }
 
 li>a {
-	margin-left: 20px;
-	margin-top: 20px;
-	text-decoration: none;
-	font-size: 17px;
-	font-weight: bold;
-	color: black;
+   margin-left: 20px;
+   margin-top: 20px;
+   text-decoration: none;
+   font-size: 17px;
+   font-weight: bold;
+   color: black;
 }
 
 li>a:hover {
-	text-decoration: underline 2px;
-	transition: 0.5 ease;
+   text-decoration: underline 2px;
+   transition: 0.5 ease;
 }
 
 .active {
-	color: rgb(000, 000, 153);
-	font-weight: 600;
-	cursor: pointer;
+   color: rgb(000, 000, 153);
+   font-weight: 600;
+   cursor: pointer;
 }
 
 .bodyContainer {
-	background: white;
-	margin-top: 120px;
-	align-self: center;
+   background: white;
+   margin-top: 120px;
+   align-self: center;
 }
 
 .darkContainer {
-	background: #e5e5e5;
-	
+   background: #eeeeee;
 }
 
 .boardInsertFormWrap {
-	width: 800px;
-	height: 920px;
-	border: 1px solid #e5e5e5;
-	margin-bottom: 100px;
+   width: 800px;
+   height: 920px;
+   border: 1px solid #e5e5e5;
+   margin-bottom: 100px;
 }
 
 button {
-	cursor: pointer;
+   cursor: pointer;
 }
 
 h1 {
-	text-align: center;
+   text-align: center;
 }
 
 .inputWrap {
-	width: 610px;
-	height: 650px;
-	margin: 0px auto;
+   width: 610px;
+   height: 650px;
+   margin: 0px auto;
 }
 
 .subjectInput {
-	width: 400px;
-	height: 30px;
-	outline: none;
+   width: 400px;
+   height: 30px;
+   outline: none;
 }
 
 .textarea {
-	width: 600px;
-	height: 500px;
-	outline: none;
+   width: 600px;
+   height: 500px;
+   outline: none;
 }
 
 .fileRadioWrap {
-	width: 610px;
-	height: 110px;
-	margin: 5px auto;
+   width: 610px;
+   height: 110px;
+   margin: 5px auto;
 }
 
 .fileRadioBox {
-	display: flex;
-	flex-direction: row;
-	width: 610px;
-	height: 40px;
-	justify-content: space-between;
+   display: flex;
+   flex-direction: row;
+   width: 610px;
+   height: 40px;
+   justify-content: space-between;
 }
 
 .radioWrap {
-	width: 160px;
-	height: 20px;
+   width: 160px;
+   height: 20px;
 }
 
 .submitButtonBox {
-	width: 200px;
-	height: 50px;
-	margin: 1px auto;
+   width: 200px;
+   height: 50px;
+   margin: 1px auto;
 }
 
 .submitButton {
-	width: 200px;
-	height: 50px;
-	border-radius: 6px;
-	border: 1px solid #e5e5e5;
-	background: black;
-	color: white;
-	cursor: pointer;
+   width: 200px;
+   height: 50px;
+   border-radius: 6px;
+   border: 1px solid #e5e5e5;
+   background: black;
+   color: white;
+   cursor: pointer;
 }
 
 .submitButton:hover {
-	background: tomato;
-	transition: all 0.3s;
-	transition-timing-function: ease;
+   background: tomato;
+   transition: all 0.3s;
+   transition-timing-function: ease;
 }
 
 .listButton {
-	width: 200px;
-	height: 50px;
-	border-radius: 6px;
-	border: 1px solid #e5e5e5;
-	background: white;
-	color: black;
-	cursor: pointer;
+   width: 200px;
+   height: 50px;
+   border-radius: 6px;
+   border: 1px solid #e5e5e5;
+   background: white;
+   color: black;
+   cursor: pointer;
 }
 
 .listButton:hover {
-	background: #e5e5e5;
-	transition: all 0.3s;
-	transition-timing-function: ease;
+   background: #e5e5e5;
+   transition: all 0.3s;
+   transition-timing-function: ease;
 }
 
 .updateButtonBox {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	width: 430px;
-	height: 50px;
-	margin: 1px auto;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   width: 430px;
+   height: 50px;
+   margin: 1px auto;
 }
 
 .posts {
-	display: flex;
-	flex-direction: column;
-	align-self: center;
-	width: 900px;
-	height: 1000px;
+   display: flex;
+   flex-direction: column;
+   align-self: center;
+   width: 900px;
+   height: 1000px;
 }
 
 .post {
-	display: flex;
-	width: 800px;
-	height: 200px;
-	margin: 20px auto;
-	text-align: center;
-	align-self: center;
-	cursor: pointer;
+   display: flex;
+   width: 800px;
+   height: 200px;
+   margin: 20px auto;
+   text-align: center;
+   align-self: center;
+   cursor: pointer;
 }
 
 .thumbnail {
-	width: 200px;
-	height: 200px;
-	float: left
+   width: 200px;
+   height: 200px;
+   float: left
 }
 
 .write {
-	display: flex;
-	flex-direction: column;
-	width: 600px;
-	height: 200px;
-	text-align: left;
-	margin-left: 10px;
-	font-family: 'Noto Sans KR', sans-serif;
+   display: flex;
+   flex-direction: column;
+   width: 600px;
+   height: 200px;
+   text-align: left;
+   margin-left: 10px;
+   font-family: 'Noto Sans KR', sans-serif;
 }
 
 .write:hover {
-	background: rgba(0, 0, 0, 0.1);
-	transition: all 0.3s;
-	transition-timing-function: ease;
+   opacity: 0.8;
+   transition: all 0.3s;
+   transition-timing-function: ease;
+   transition: all 0.3s;
 }
 
 .counter {
-	width: 200px;
-	height: 50px;
-	border: 1px solid #e5e5e5;
-	margin: 30px auto;
+   width: 200px;
+   height: 50px;
+   border: 1px solid #e5e5e5;
+   margin: 30px auto;
 }
 
 .writeButtonBox {
-	margin-top: 20px;
-	margin-left: 750px;
+   margin-top: 20px;
+   margin-left: 750px;
 }
 
-#wirteButton {
-	width: 110px;
-	height: 40px;
-	border-radius: 25px;
-	border: 1px solid #e5e5e5;
-	background: black;
-	color: white;
-	cursor: pointer;
+.wirteButton {
+   width: 110px;
+   height: 40px;
+   border-radius: 25px;
+   border: 1px solid #e5e5e5;
+   background: black;
+   color: white;
+   cursor: pointer;
 }
 
 #wirteButton:hover {
-	background: tomato;
-	transition: all 0.3s;
-	transition-timing-function: ease;
+   background: tomato;
+   transition: all 0.3s;
+   transition-timing-function: ease;
 }
 
 .bNamedateBox {
-	width: 550px;
-	height: 30px;
-	font-size: 20px;
-	font-weight: bold;
-	margin-top: 10px;
-	margin-left: 5px;
+   width: 550px;
+   height: 30px;
+   font-size: 20px;
+   font-weight: bold;
+   margin-top: 10px;
+   margin-left: 5px;
 }
 
 .bCntBox {
-	width: 550px;
-	height: 90px;
-	margin-top: 5px;
-	margin-left: 5px;
-	font-family: 'Noto Sans KR', sans-serif;
-	overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+   width: 550px;
+   height: 90px;
+   margin-top: 5px;
+   margin-left: 5px;
+   font-family: 'Noto Sans KR', sans-serif;
+   display: inline-block;
+   white-space: nowrap;
+   overflow: hidden;
+   text-overflow: ellipsis;
+   white-space: normal;
+   height: 3em;
+   line-height: 1.5;
+   text-align: left;
+   word-wrap: break-word;
+   display: -webkit-box;
+   -webkit-line-clamp: 2;
+   -webkit-box-orient: vertical;
 }
 
 .bIdViewBox {
-	width: 550px;
-	height: 20px;
-	margin-top: 5px;
-	margin-left:5px;
-	font-size: 5px;
-	font-family: 'Noto Sans KR', sans-serif;
+   width: 550px;
+   height: 20px;
+   margin-top: 30px;
+   margin-left: 5px;
+   font-size: 5px;
+   font-family: 'Noto Sans KR', sans-serif;
 }
 
 .ReadButton {
-	width: 100px;
-	height: 40px;
-	border-radius: 6px;
-	background: rgb(255,051,051);
-	color: white;
-	cursor: pointer;
-	margin-left:5px;
-	margin-top: 10px;
-	border-style: none;
+   width: 100px;
+   height: 40px;
+   border-radius: 6px;
+   background: rgb(255, 051, 051);
+   color: white;
+   cursor: pointer;
+   margin-left: 5px;
+   margin-top: 20px;
+   border-style: none;
 }
 
 img {
-	margin-right: 50px;
+   max-width: 100%;
 }
