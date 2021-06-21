@@ -41,4 +41,4 @@ public class ListAction implements CommandProcess {
 		return "boardList";
 	}
 
-}
+} 

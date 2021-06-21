@@ -38,4 +38,4 @@ public class MainlistAction implements CommandProcess {
 		return "/board/mainlist";
 	}
 
-}
+} 
