@@ -9,16 +9,22 @@
 	<select id="login" parameterType="string"  resultType="string">
 		select m_id from rmember where m_id=#{m_id} and m_del !='y'
 	</select>
+	
+	<select id="IdChk" parameterType="string"  resultType="string">
+		select m_id from rmember where m_id=#{m_id} and m_del !='y'
+	</select>
+	
+	<insert id="insert" parameterType="rmember">
+		insert into rmember values (#{m_id},#{m_pass},#{m_name},
+		#{m_addr},#{m_mail},#{m_tel}, sysdate, 'n')
+	</insert>
 
 <!-- select password from member2 where id=? and del!='y' -->
 
 <!-- 	<select id="select" parameterType="string" resultType="menber">
 		select * from menber where id=#{id} 
 	</select>
-	<insert id="insert" parameterType="menber">
-		insert into menber values (#{m_id},#{m_pass},#{m_name},#{m_ssn},
-			#{m_post},#{m_addr},#{m_mail},#{m_tel}, sysdate, 'n')
-	</insert>
+	
 	<update id="update" parameterType="menber">
 		update menber set m_pass=#{m_pass},m_name=#{m_name},m_ssn=#{m_ssn},
 		m_post=#{m_post},m_addr=#{m_addr},m_mail=#{m_mail},m_tel=#{m_tel} where id=#{id}

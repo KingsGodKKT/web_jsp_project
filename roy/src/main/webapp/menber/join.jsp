@@ -12,7 +12,7 @@
 			alert("회원가입 완료");
 			//이 부분 메인으로 보내기
 			//history.go(-1);
-			location.href = "../main.jsp";
+			location.href = "../index.jsp";
 		</script>
 	</c:if>
 	
