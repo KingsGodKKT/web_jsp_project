@@ -65,7 +65,7 @@ li>a:hover {
 			<a href="index.jsp"><img class="logo" alt=""
 				src="../image/기록새록.png"></a>
 			<ul>
-				<li><a class="active" href="loginForm.do">로그인</a></li>
+				<li><a href="loginForm.do">로그인</a></li>
 				<li><a href="joinForm.jsp">회원가입</a></li>
 			</ul>
 		</nav>
@@ -78,7 +78,8 @@ li>a:hover {
 			<a href="../index.jsp"><img class="logo" alt=""
 				src="../image/기록새록.png"></a>
 			<ul>
-				<li><b>${m_id}</b></li>
+				<li><a class="active" href="">게시판</a></li>
+				<li><b>${m_id}님</b></li>
 				<li><a href="../logout.do">로그아웃</a></li>
 			</ul>
 		</nav>

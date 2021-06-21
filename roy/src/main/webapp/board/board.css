@@ -90,19 +90,19 @@ h1 {
    outline: none;
 }
 
-#textarea {
+.textarea {
    width: 600px;
    height: 500px;
    outline: none;
 }
 
-#fileRadioWrap {
+.fileRadioWrap {
    width: 610px;
    height: 110px;
    margin: 5px auto;
 }
 
-#fileRadioBox {
+.fileRadioBox {
    display: flex;
    flex-direction: row;
    width: 610px;
@@ -110,12 +110,12 @@ h1 {
    justify-content: space-between;
 }
 
-#radioWrap {
-   width: 130px;
+.radioWrap {
+	width: 160px;
    height: 20px;
 }
 
-#submitButtonBox {
+.submitButtonBox {
    width: 200px;
    height: 50px;
    margin: 1px auto;
@@ -135,4 +135,30 @@ h1 {
    background: tomato;
    transition: all 0.3s;
    transition-timing-function: ease;
+}
+
+.listButton {
+   width: 200px;
+   height: 50px;
+   border-radius: 6px;
+   border: 1px solid #e5e5e5;
+   background: white;
+   color: black;
+   cursor: pointer;
+}
+
+.listButton:hover {
+	background: #e5e5e5;
+	transition: all 0.3s;
+   	transition-timing-function: ease;
+	
+}
+
+.updateButtonBox {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	width: 430px;
+	height: 50px;
+	margin: 1px auto;	
 }
