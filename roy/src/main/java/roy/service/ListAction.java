@@ -15,8 +15,7 @@ public class ListAction implements CommandProcess {
 	public String requestPro(HttpServletRequest request, HttpServletResponse response) {
 		HttpSession session=request.getSession();
 		String m_id = (String)session.getAttribute("m_id"); 
-		m_id = "kk"; //임시로 넣은 아이디
-		final int ROW_PER_PAGE = 5;
+		final int ROW_PER_PAGE = 4;
 		final int PAGE_PER_BLOCK = 10;
 		String pageNum = request.getParameter("pageNum");
 		if (pageNum == null || pageNum.equals("")) pageNum = "1";
