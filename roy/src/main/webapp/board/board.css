@@ -190,7 +190,8 @@ h1 {
 }
 
 .thumbnail-wrapper {
-  width: 50%;
+  width: 200px;
+  height: 200px;
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
@@ -233,9 +234,6 @@ h1 {
 }
 
 .counter {
-   width: 200px;
-   height: 50px;
-   border: 1px solid #e5e5e5;
    margin: 30px auto;
 }
 

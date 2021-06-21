@@ -38,7 +38,7 @@
 				</div>
 			</c:forEach>
 		</section>
-		<div align="center">
+		<div align="center" class="counter">
 			<c:if test="${startPage > PAGE_PER_BLOCK }">
 				<button class="num"
 					onclick="location.href='list.bo?pageNum=${startPage - 1}'">이전</button>
