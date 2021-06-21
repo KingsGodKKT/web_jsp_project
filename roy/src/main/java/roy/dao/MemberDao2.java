@@ -1,3 +1,4 @@
+/*
 package roy.dao;
 import java.sql.*;
 import java.util.ArrayList;
@@ -216,3 +217,4 @@ public class MemberDao2 {
 		return result;
 	}
 }
+*/

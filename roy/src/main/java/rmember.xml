@@ -18,6 +18,10 @@
 		insert into rmember values (#{m_id},#{m_pass},#{m_name},
 		#{m_addr},#{m_mail},#{m_tel}, sysdate, 'n')
 	</insert>
+	
+	<select id="selectOMemberList" parameterType="string" resultType="rmember" >
+		select m_name, m_tel, m_addr from rmember where m_id= #{m_id} 
+	</select>
 
 <!-- select password from member2 where id=? and del!='y' -->
 

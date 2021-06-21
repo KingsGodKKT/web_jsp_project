@@ -8,11 +8,13 @@ import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import roy.dao.BoardDao;
+import roy.dao.MemberDao;
 import roy.dao.ProductDao;
 import roy.model.Board;
 import roy.model.ParamObject;
 import roy.model.Porder;
 import roy.model.Product;
+import roy.model.Rmember;
 
 public class OrderBuy implements CommandProcess {
 
@@ -62,12 +64,16 @@ public class OrderBuy implements CommandProcess {
 		Product product = pi.getDetail(p_num);
 		BoardDao bi = BoardDao.getInstance();
 		Porder porder = new Porder();
+		//주문자 정보
+		MemberDao md = MemberDao.getInstance();
+		
 		
 		ParamObject paramObject = new ParamObject();
 		paramObject.setString(str);
 		
 		List<Board> olist= bi.selectOrderList(paramObject);
-//		System.out.println("olist" + olist);
+		List<Rmember> omlist = md.selectOMemberList(m_id);
+		System.out.println("omlist" + omlist);
 		
 		
 		porder.setO_qty(o_qty);
@@ -77,6 +83,7 @@ public class OrderBuy implements CommandProcess {
 		porder.setP_num(p_num);
 		porder.setM_id(m_id);
 		
+		request.setAttribute("omlist", omlist);
 		request.setAttribute("olist", olist);
 		request.setAttribute("porder", porder);
 		request.setAttribute("product", product);

@@ -7,6 +7,8 @@ import java.sql.ResultSet;
 import java.util.HashMap;
 import java.util.List;
 
+import javax.servlet.http.HttpSession;
+
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -79,8 +81,8 @@ public class BoardDao {
 	}
 
 	// board
-	public List<Board> selectBoardList() {
-		List<Board> blist = session.selectList("boardns.selectBoardList");
+	public List<Board> selectBoardList(String m_id) {
+		List<Board> blist = session.selectList("boardns.selectBoardList", m_id);
 		System.out.println("blist :" + blist);
 		return blist;
 	}
@@ -89,5 +91,6 @@ public class BoardDao {
 	public List<Board> selectOrderList(ParamObject paramObject) {
 		return session.selectList("boardns.selectOrderList", paramObject);
 	}
+	
 
 }
