@@ -6,7 +6,7 @@ import javax.servlet.http.HttpServletResponse;
 public class BoardInsertForm implements CommandProcess {
 
 	public String requestPro(HttpServletRequest request, HttpServletResponse response) {
-		return "/board/boardInsertForm";
+		return "boardInsertForm";
 	}
 
 }

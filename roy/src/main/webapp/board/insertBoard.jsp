@@ -11,7 +11,7 @@
 <c:if test="${result > 0 }">
 	<script type="text/javascript">
 		alert("게시글 작성 성공");
-		location.href="list.bo";
+		location.href="mainlist.bo";
 	</script>	
 </c:if>
 <c:if test="${result == 0 }">
