@@ -80,7 +80,7 @@ if (session.getAttribute("m_id") == null) {
 				src="../image/기록새록.png"></a>
 			<ul>
 				<li><b>${m_id}</b>님  </li>
-				<li><a href="../board/mainlist.bo">게시글</a></li>
+				<li><a href="../board/boardList.jsp">게시글</a></li>
 				<li><a href="../product/productlistview.do">포토북</a></li>
 				<li><a href="../logout.do">로그아웃</a></li>
 			</ul>

@@ -6,9 +6,8 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<link href="../css/bootstrap.min.css" rel="stylesheet">
+<link href="board.css" rel="stylesheet">
 <script type="text/javascript" src="../js/jquery.js"></script>
-<script src="../js/bootstrap.min.js"></script>
 <script type="text/javascript">
 	$(function() {
 		$('#disp').load('list.bo');
@@ -17,47 +16,31 @@
 </head>
 <body>
 	<jsp:include page="../module/top.jsp" />
-	<div class="container">
+	<div class="bodyContainer">
+		<div>
+			<div>
+				<h2>${board.b_name }</h2>
+			</div>
+			<div id="detailView">아이디&nbsp;${board.m_id }&emsp;조회수&nbsp;${board.b_view }&emsp;작성일자&nbsp;${board.b_date }</div>
+			<div>
+				<img class="detailImg" alt="" src="/roy/upload/${board.f_name }"
+					width="600" height="400">
+			</div>
+			<div id="detailCnt">${board.b_cnt }</div>
 
-		<input type="button" class="btn black mr5"
-			onclick="location.href='mainlist.bo?pageNum=${pageNum}'" value="기록새록">
+		</div>
+		<div class="fileRadioBox">
+			<input type="button" class="prettyButton"
+				onclick="location.href='mainlist.bo?pageNum=${pageNum}'"
+				value="게시글 목록">
 
-		<table class="table table-hover">
-			<caption>게시글 상세 보기</caption>
-			<tr>
-				<th width="100">제목</th>
-				<td>${board.b_name }</td>
-			</tr>
-			<tr>
-				<th>작성자id</th>
-				<td>${board.m_id }</td>
-			</tr>
-			<tr>
-				<th>조회수</th>
-				<td>${board.b_view }</td>
-			</tr>
-			<tr>
-				<th>작성일</th>
-				<td>${board.b_date }</td>
-			</tr>
-			<tr>
-				<th>내용</th>
-				<td><pre>${board.b_cnt }</pre></td>
-			</tr>
-			<tr>
-				<td>사진</td>
-				<td><img alt="" src="/roy/upload/${board.f_name }" width="400">
-				</td>
-			</tr>
-		</table>
-		<div class="btn_right mt15">
-			<input type="button" class="btn black mr5"
-				onclick="location.href='mainlist.bo?pageNum=${pageNum}'" value="게시글 목록">
-			<input type="button" class="btn black mr5"
-				onclick="location.href='updateForm.bo?b_num=${board.b_num}&pageNum=${pageNum}'"
-				value="수정"> <input type="button" class="btn black mr5"
-				onclick="location.href='deleteForm.bo?b_num=${board.b_num}&pageNum=${pageNum}'"
-				value="삭제">
+			<div>
+				<input type="button" class="nomalButton"
+					onclick="location.href='updateForm.bo?b_num=${board.b_num}&pageNum=${pageNum}'"
+					value="수정" > <input type="button" class="nomalButton"
+					onclick="location.href='deleteForm.bo?b_num=${board.b_num}&pageNum=${pageNum}'"
+					value="삭제">
+			</div>
 		</div>
 	</div>
 </body>

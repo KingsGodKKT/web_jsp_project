@@ -9,7 +9,6 @@
 <link href="board.css?after" rel="stylesheet">
 <script type="text/javascript" src="../js/jquery.js"></script>
 <style type="text/css">
-
 </style>
 </head>
 <body class="darkContainer">
@@ -21,24 +20,35 @@
 		</div>
 		<section class="posts">
 			<c:forEach var="board" items="${list }">
-					<div class="post" onClick="location.href='view.bo?b_num=${board.b_num }&pageNum=${currentPage}'">
-					<div class="thumbnail">
-						<img alt="" src="/roy/upload/${board.f_name }" width="200" height="200">
+				<div class="post"
+					onClick="location.href='view.bo?b_num=${board.b_num }&pageNum=${currentPage}'">
+					<div class="thumbnail-wrapper">
+						<div class="thumbnail">
+							<div class="thumbnail-centered">
+								<img class="thumbnail-img" alt="" src="/roy/upload/${board.f_name }" >
+							</div>
+						</div>
 					</div>
-					<div class="write"><div class="bNamedateBox">${board.b_name } </div>
-						<div class="bCntBox">${board.b_cnt}</div><button class="ReadButton">Read More</button> <div class="bIdViewBox">아이디${board.m_id }&emsp;조회수${board.b_view }&emsp;작성일${board.b_date }</div></div>
+					<div class="write">
+						<div class="bNamedateBox">${board.b_name }</div>
+						<div class="bCntBox">${board.b_cnt}</div>
+						<button class="ReadButton">Read More</button>
+						<div class="bIdViewBox">아이디${board.m_id }&emsp;조회수${board.b_view }&emsp;작성일${board.b_date }</div>
+					</div>
 				</div>
 			</c:forEach>
 		</section>
 		<div align="center">
 			<c:if test="${startPage > PAGE_PER_BLOCK }">
-				<button onclick="location.href='list.bo?pageNum=${startPage - 1}'">이전</button>
+				<button class="num"
+					onclick="location.href='list.bo?pageNum=${startPage - 1}'">이전</button>
 			</c:if>
 			<c:forEach var="i" begin="${startPage}" end="${endPage}">
-				<button onclick="location.href='list.bo?pageNum=${i}'">${i }</button>
+				<button class="num" onclick="location.href='list.bo?pageNum=${i}'">${i }</button>
 			</c:forEach>
 			<c:if test="${endPage < totalPage}">
-				<button onclick="location.href='list.bo?pageNum=${endPage + 1}'">다음</button>
+				<button class="num"
+					onclick="location.href='list.bo?pageNum=${endPage + 1}'">다음</button>
 			</c:if>
 
 		</div>

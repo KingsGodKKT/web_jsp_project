@@ -64,6 +64,7 @@ li>a:hover {
 .bodyContainer {
    background: white;
    margin-top: 120px;
+   margin-bottom: 100px;
    align-self: center;
 }
 
@@ -188,10 +189,30 @@ h1 {
    cursor: pointer;
 }
 
+.thumbnail-wrapper {
+  width: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
 .thumbnail {
-   width: 200px;
-   height: 200px;
-   float: left
+  position: relative;
+  padding-top: 100%;
+  overflow: hidden;
+}
+
+.thumbnail-centered {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transform: translate(50%, 50%);
+}
+
+.thumbnail-img {
+/*   max-width: 100%; */
+/*   height: 박스의 height와 같아야 한다. */
+  transform: translate(-50%, -50%);
 }
 
 .write {
@@ -289,6 +310,55 @@ h1 {
    border-style: none;
 }
 
-img {
+.detailImg {
    max-width: 100%;
+   height: auto;
 }
+
+.num {
+	background: white;
+	border: 1px solid #e5e5e5;
+}
+
+.num:hover {
+	background: #e5e5e5;
+	transition: all 0.3s;
+    transition-timing-function: ease;
+}
+
+#detailView {
+	margin-bottom: 10px;
+	font-size: 15px;
+	color: #333333;
+}
+
+#detailCnt {
+	margin-top: 10px;
+	margin-bottom: 50px;
+}
+
+.nomalButton {
+	width: 80px;
+	height: 30px;
+	border-radius: 10px;
+	background: white;
+	border: 1px solid #e5e5e5;
+	cursor: pointer;
+}
+
+.prettyButton {
+	width: 100px;
+	height: 30px;
+	border-radius: 10px;
+	background: black;
+	color: white;
+	border: 1px solid #e5e5e5;
+	cursor: pointer;
+}
+
+.prettyButton:hover {
+	background:#518d7d;
+	transition: all 0.3s;
+    transition-timing-function: ease;
+}
+
