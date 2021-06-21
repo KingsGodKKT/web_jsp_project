@@ -9,17 +9,7 @@
 <script type="text/javascript" src="../js/jquery.js"></script>
 </head>
 <body>
-	<header>
-		<nav>
-			<a href="index.jsp"><img class="logo" alt=""
-				src="../image/기록새록.png"></a>
-			<ul>
-				<li><a class="active" href=list.bo>게시글</a></li>
-				<li><a href="order/orderbuy.jsp">포토북</a></li>
-				<li><a href="menber/logout.jsp">로그아웃</a></li>
-			</ul>
-		</nav>
-	</header>
+	<jsp:include page="../module/top.jsp" />
 	<div class="bodyContainer">
 		<h1>게시물 수정</h1>
 		<div class="boardInsertFormWrap">
