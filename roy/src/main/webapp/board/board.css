@@ -233,7 +233,7 @@ h1 {
    cursor: pointer;
 }
 
-#wirteButton:hover {
+.wirteButton:hover {
    background: tomato;
    transition: all 0.3s;
    transition-timing-function: ease;

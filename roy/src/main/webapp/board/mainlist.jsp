@@ -16,7 +16,7 @@
 	<jsp:include page="../module/top.jsp" />
 	<div class="bodyContainer">
 		<div class="writeButtonBox">
-			<input type="button" id="wirteButton"
+			<input type="button" class="wirteButton"
 				onclick="location.href='boardInsertForm.bo'" value="글쓰기">
 		</div>
 		<section class="posts">
