@@ -46,7 +46,7 @@
 			</tr>
 			<tr>
 				<td>사진</td>
-				<td><img alt="" src="upload/${board.f_name }" width="400">
+				<td><img alt="" src="/roy/upload/${board.f_name }" width="400">
 				</td>
 			</tr>
 		</table>
