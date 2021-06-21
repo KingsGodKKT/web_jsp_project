@@ -14,9 +14,7 @@ public class InsertBoard implements CommandProcess{
 	public String requestPro(HttpServletRequest request, HttpServletResponse response) {
 		// login한 id 가져오기
 		HttpSession session = request.getSession();
-		String userId = (String)session.getAttribute("userId");
-		// 로그인이 안된 경우에 임시로 kk로 하자
-		if (userId==null) userId = "kk";
+		String m_id = (String)session.getAttribute("m_id");
 		String real = request.getSession().getServletContext().getRealPath("/upload"); //upload한 파일 저장소
 		int maxSize = 1024 * 1024 * 10; // 파일 최대 10M
 		try {
@@ -32,7 +30,7 @@ public class InsertBoard implements CommandProcess{
 			Board board = new Board();
 			board.setF_name(fileName);
 			board.setB_name(board_subject);
-			board.setM_id(userId);
+			board.setM_id(m_id);
 			board.setB_cnt(board_content);
 			board.setB_shr(cs_open);
 			// DB에 입력 시키기

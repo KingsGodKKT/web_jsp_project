@@ -34,7 +34,7 @@
 					<td>${board.b_date }</td>
 					<td>${board.b_view }</td>
 					<td>${board.m_id }</td>
-					<td><img alt="" src="upload/${board.f_name }" width="100">
+					<td><img alt="" src="/roy/upload/${board.f_name }" width="100">
 					</td>
 				</tr>
 			</c:forEach>

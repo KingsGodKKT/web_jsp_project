@@ -38,8 +38,7 @@
 				<div class="fileRadioWrap">
 					<h3>첨부파일</h3>
 					<div class="fileRadioBox">
-						<input type="file" name="filename"><img alt=""
-							src="upload/${board.f_name }" width="400">
+						<input type="file" name="filename">
 						<div class="radioWrap">
 							<input type="radio" name="cs_open" id="cs_open" value="y"
 								class="radio" /><label for="cs_open">공개</label><input
@@ -50,7 +49,7 @@
 				</div>
 				<div class="updateButtonBox">
 					<input type="button" class="listButton"
-						onclick="location.href='list.bo'" value="목록으로"> <input
+						onclick="location.href='mainlist.bo'" value="목록으로"> <input
 						class="submitButton" type="submit" value="확인">
 				</div>
 			</form>

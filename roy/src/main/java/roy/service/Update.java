@@ -17,9 +17,7 @@ public class Update implements CommandProcess{
 		int result = 0;
 		// login한 id 가져오기
 		HttpSession session = request.getSession();
-		String userId = (String)session.getAttribute("userId");
-		// 로그인이 안된 경우에 임시로 kk로 하자
-		if (userId==null) userId = "kk";
+		String m_id = (String)session.getAttribute("m_id");
 		String real = request.getSession().getServletContext().getRealPath("/upload"); //upload한 파일 저장소
 		int maxSize = 1024 * 1024 * 10; // 파일 최대 10M
 		MultipartRequest mr = null;
@@ -40,7 +38,7 @@ public class Update implements CommandProcess{
 		board.setF_name(filename);
 		board.setB_cnt(content);
 		board.setB_name(subject);
-		board.setM_id(userId);
+		board.setM_id(m_id);
 		board.setB_shr(cs_open);
 		// DB에 입력 시키기
 		BoardDao bd = BoardDao.getInstance();
