@@ -8,7 +8,7 @@
 </head>
 <body>
 <script type="text/javascript">
-	location.href="board/list.bo";
+	location.href="board/mainlist.bo";
 </script>
 </body>
 </html>

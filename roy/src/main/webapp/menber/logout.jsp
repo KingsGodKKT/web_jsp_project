@@ -4,7 +4,7 @@
 <title>Insert title here</title></head><body>
 <script type="text/javascript">
 	alert("로그 아웃 되었습니다");
-	location.href= "main.jsp";
+	location.href= "index.jsp";
 </script>
 </body>
 </html>

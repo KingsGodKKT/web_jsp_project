@@ -12,9 +12,7 @@ import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
-import roy.model.Board;
 
-import roy.model.ParamObject;
 import roy.model.Rmember;
 
 public class MemberDao {
@@ -42,14 +40,24 @@ public class MemberDao {
 	public String loginChk(String m_id) {
 		return (String) session.selectOne("rmemberns.loginChk", m_id);
 	}
+
 	public String login(String m_id) {
 		return (String) session.selectOne("rmemberns.login", m_id);
+	}
+
+	public int IdChk(String m_id) {
+		int result = 0;
+		String str = (String) session.selectOne("rmemberns.IdChk", m_id);
+		if (str != null) {
+			result = 1;
+		}
+		return result;
 	}
 
 	public int insert(Rmember rme) {
 		int result = 0;
 		result = session.insert("rmemberns.insert", rme);
-		return 0;
+		return result;
 	}
 
 }

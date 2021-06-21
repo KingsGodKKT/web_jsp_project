@@ -4,8 +4,6 @@ public class Rmember {
 	private String m_id ;    
 	private String m_pass ;    
 	private String m_name ;    
-	private Integer m_ssn ;    
-	private Integer m_post ;  
 	private String m_addr;   
 	private String m_mail;   
 	private String m_tel;  
@@ -29,18 +27,7 @@ public class Rmember {
 	public void setM_name(String m_name) {
 		this.m_name = m_name;
 	}
-	public Integer getM_ssn() {
-		return m_ssn;
-	}
-	public void setM_ssn(Integer m_ssn) {
-		this.m_ssn = m_ssn;
-	}
-	public Integer getM_post() {
-		return m_post;
-	}
-	public void setM_post(Integer m_post) {
-		this.m_post = m_post;
-	}
+	
 	public String getM_addr() {
 		return m_addr;
 	}

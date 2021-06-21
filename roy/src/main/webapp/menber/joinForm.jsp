@@ -7,31 +7,21 @@
 <title>Insert title here</title>
 <link rel="stylesheet" type="text/css" href="common.css">
 <script type="text/javascript">
-	function chk() {
-		if (!frm.id.value) {
-			alert("아이디 입력후에 체크하세요");
-			frm.id.focus();
-			return false;
+function chk() {
+	if (!frm.m_id.value) {
+		alert("아이디를 입력해주세요");
+		frm.id.focus();
+		return false;
 		}
-		window.open("confirm.jsp?id=" + frm.id.value, "",
-				"width=300 height=300");
-	}
+		window.open("confirm.do?m_id="+frm.m_id.value, "confirm", "width=300 height=300");
+}
 </script>
 
 </head>
 <body>
-	<header>
-		<nav>
-			<a href="index.jsp"><img class="logo" alt=""
-				src="../image/기록새록.png"></a>
-			<ul>
-				<li><a href="menber/loginForm.jsp">로그인</a></li>
-				<li><a class="active" href="menber/joinForm.jsp">회원가입</a></li>
-			</ul>
-		</nav>
-	</header>
+	<jsp:include page="../module/top.jsp" />
 
-	<form action="join.jsp" method="post" name="frm">
+	<form action="join.do" method="post" name="frm">
 		<div class="joinBox">
 			<table class="joinTable">
 		<caption>회원가입</caption>
@@ -58,6 +48,11 @@
 				<tr>
 					<th>주소</th>
 					<td><input class="joinInput" type="text" name="m_addr"
+						required="required"></td>
+				</tr>
+				<tr>
+					<th>이메일</th>
+					<td><input class="joinInput" type="email" name="m_mail"
 						required="required"></td>
 				</tr>
 				<tr>
