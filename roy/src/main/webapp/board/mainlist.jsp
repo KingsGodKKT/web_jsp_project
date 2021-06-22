@@ -41,14 +41,14 @@
 		<div align="center" class="counter">
 			<c:if test="${startPage > PAGE_PER_BLOCK }">
 				<button class="num"
-					onclick="location.href='list.bo?pageNum=${startPage - 1}'">이전</button>
+					onclick="location.href='mainlist.bo?pageNum=${startPage - 1}'">이전</button>
 			</c:if>
 			<c:forEach var="i" begin="${startPage}" end="${endPage}">
-				<button class="num" onclick="location.href='list.bo?pageNum=${i}'">${i }</button>
+				<button class="num" onclick="location.href='mainlist.bo?pageNum=${i}'">${i }</button>
 			</c:forEach>
 			<c:if test="${endPage < totalPage}">
 				<button class="num"
-					onclick="location.href='list.bo?pageNum=${endPage + 1}'">다음</button>
+					onclick="location.href='mainlist.bo?pageNum=${endPage + 1}'">다음</button>
 			</c:if>
 
 		</div>
