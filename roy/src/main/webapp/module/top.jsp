@@ -3,8 +3,10 @@
 <html>
 <head>
 <link href="style.css" rel="stylesheet" type="text/css">
-
 <style type="text/css">
+@import
+   url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap')
+   ;
 nav {
 	display: flex;
 	flex-direction: row;
@@ -15,6 +17,7 @@ nav {
 	width: 100%;
 	background: white;
 	z-index: 1;
+	font-family: 'Noto Sans KR', sans-serif;
 }
 
 .logo {
@@ -44,14 +47,10 @@ li>a {
 
 li>a:hover {
 	text-decoration: underline 2px;
-	transition: 0.5 ease;
+	transition: all 0.3s;
+   	transition-timing-function: ease
 }
 
-.active {
-	color: rgb(000, 000, 153);
-	font-weight: 600;
-	cursor: pointer;
-}
 </style>
 <%
 String path = request.getContextPath();
@@ -66,7 +65,7 @@ if (session.getAttribute("m_id") == null) {
 			<a href="../index.jsp"><img class="logo" alt=""
 				src="../image/기록새록.png"></a>
 			<ul>
-				<li><a class="active" href="../menber/loginForm.jsp">로그인</a></li>
+				<li><a href="../menber/loginForm.jsp">로그인</a></li>
 				<li><a href="../menber/joinForm.jsp">회원가입</a></li>
 			</ul>
 		</nav>
